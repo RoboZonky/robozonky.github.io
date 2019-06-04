@@ -3,23 +3,23 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
     function drawBAR3Chart0() {
         var data = google.visualization.arrayToDataTable([
                 ['Účel', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
-                   ['Auto-moto (142 z 10327)',
+                   ['Auto-moto (142 z 10325)',
                     0, 0.01, 0, 0.1, 0, 0.13, 0, 0.22, 0.33, 0.4, 0.19
                     ], 
                    ['Cestování (10 z 595)',
                     0, 0, 0, 0.17, 0, 0.17, 0, 0.34, 0.84, 0, 0.17
                     ], 
-                   ['Domácnost (225 z 10913)',
+                   ['Domácnost (225 z 10911)',
                     0, 0.01, 0.03, 0.15, 0, 0.25, 0, 0.46, 0.4, 0.39, 0.38
                     ], 
                    ['Elektronika (10 z 713)',
                     0, 0, 0, 0, 0, 0.14, 0, 0.42, 0, 0.42, 0.42
                     ], 
-                   ['Jiné (150 z 8307)',
+                   ['Jiné (150 z 8306)',
                     0, 0.01, 0.01, 0.08, 0, 0.28, 0, 0.42, 0.37, 0.36, 0.26
                     ], 
-                   ['Refinancování půjček (235 z 11729)',
-                    0, 0.03, 0.03, 0.13, 0, 0.32, 0, 0.32, 0.35, 0.38, 0.46
+                   ['Refinancování půjček (234 z 11727)',
+                    0, 0.03, 0.03, 0.13, 0, 0.32, 0, 0.32, 0.35, 0.38, 0.45
                     ], 
                    ['Vlastní projekt (56 z 2713)',
                     0, 0, 0.04, 0.07, 0, 0.22, 0, 0.59, 0.41, 0.59, 0.15
@@ -33,8 +33,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         ]);
         var options = {
             chart: {
-                title: 'Zesplatněné půjčky podle účelu (Zonky do 2019-04 vč.)',
-                subtitle: 'Autor: Lukáš Petrovický, 2019-06-02'
+                title: 'Zesplatněné půjčky podle účelu',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 4. 6. 2019 ze Zonky loanbooku ke konci 4/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -42,7 +42,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                   0: {label: 'Zesplatněno z celku [%]'}
                 },
             },
-            series: {
+                        series: {
                 0: { color: '#c0498b'},
                 1: { color: '#8b59be'},
                 2: { color: '#596abe'},
@@ -54,7 +54,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                 8: { color: '#d7954b'},
                 9: { color: '#e75637'},
                 10: { color: '#d12f2f'}
-            },
+            }
+,
             isStacked: true
         };
         var chart_div = document.getElementById('chart-BAR-0-interactive');
@@ -66,7 +67,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
     function drawBAR3Chart1() {
         var data = google.visualization.arrayToDataTable([
                 ['Kraj', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
-                   ['Hlavní město Praha (84 z 5832)',
+                   ['Hlavní město Praha (84 z 5829)',
                     0, 0, 0.03, 0.12, 0, 0.14, 0, 0.29, 0.34, 0.34, 0.17
                     ], 
                    ['Jihomoravský kraj (55 z 4789)',
@@ -90,16 +91,16 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                    ['Moravskoslezský kraj (122 z 5929)',
                     0, 0.02, 0.03, 0.13, 0, 0.3, 0, 0.42, 0.3, 0.44, 0.4
                     ], 
-                   ['Olomoucký kraj (44 z 2632)',
-                    0, 0, 0, 0.11, 0, 0.11, 0, 0.23, 0.27, 0.53, 0.42
+                   ['Olomoucký kraj (43 z 2631)',
+                    0, 0, 0, 0.11, 0, 0.11, 0, 0.23, 0.27, 0.53, 0.38
                     ], 
-                   ['Pardubický kraj (45 z 2120)',
+                   ['Pardubický kraj (45 z 2119)',
                     0, 0.05, 0, 0.14, 0, 0.28, 0, 0.52, 0.38, 0.42, 0.33
                     ], 
-                   ['Plzeňský kraj (50 z 2285)',
+                   ['Plzeňský kraj (50 z 2284)',
                     0, 0.04, 0, 0.13, 0, 0.22, 0, 0.39, 0.53, 0.44, 0.44
                     ], 
-                   ['Středočeský kraj (110 z 6818)',
+                   ['Středočeský kraj (110 z 6817)',
                     0, 0.01, 0, 0.07, 0, 0.21, 0, 0.4, 0.29, 0.28, 0.35
                     ], 
                    ['Zlínský kraj (32 z 2214)',
@@ -111,8 +112,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         ]);
         var options = {
             chart: {
-                title: 'Zesplatněné půjčky podle kraje (Zonky do 2019-04 vč.)',
-                subtitle: 'Autor: Lukáš Petrovický, 2019-06-02'
+                title: 'Zesplatněné půjčky podle kraje',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 4. 6. 2019 ze Zonky loanbooku ke konci 4/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -120,7 +121,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                   0: {label: 'Zesplatněno z celku [%]'}
                 },
             },
-            series: {
+                        series: {
                 0: { color: '#c0498b'},
                 1: { color: '#8b59be'},
                 2: { color: '#596abe'},
@@ -132,7 +133,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                 8: { color: '#d7954b'},
                 9: { color: '#e75637'},
                 10: { color: '#d12f2f'}
-            },
+            }
+,
             isStacked: true
         };
         var chart_div = document.getElementById('chart-BAR-1-interactive');
@@ -149,9 +151,6 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                     ], 
                    ['Jiné (7 z 363)',
                     0, 0, 0, 0.28, 0, 0, 0, 0.28, 0.28, 0.55, 0.55
-                    ], 
-                   ['Nezaměstnaný (1 z 7)',
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14.29
                     ], 
                    ['OSVČ (78 z 5621)',
                     0, 0, 0.04, 0.11, 0, 0.14, 0, 0.37, 0.28, 0.36, 0.09
@@ -174,8 +173,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         ]);
         var options = {
             chart: {
-                title: 'Zesplatněné půjčky podle zdroje příjmu žadatele (Zonky do 2019-04 vč.)',
-                subtitle: 'Autor: Lukáš Petrovický, 2019-06-02'
+                title: 'Zesplatněné půjčky podle zdroje příjmu žadatele',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 4. 6. 2019 ze Zonky loanbooku ke konci 4/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -183,7 +182,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                   0: {label: 'Zesplatněno z celku [%]'}
                 },
             },
-            series: {
+                        series: {
                 0: { color: '#c0498b'},
                 1: { color: '#8b59be'},
                 2: { color: '#596abe'},
@@ -195,7 +194,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                 8: { color: '#d7954b'},
                 9: { color: '#e75637'},
                 10: { color: '#d12f2f'}
-            },
+            }
+,
             isStacked: true
         };
         var chart_div = document.getElementById('chart-BAR-2-interactive');
@@ -207,10 +207,10 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
     function drawBAR3Chart3() {
         var data = google.visualization.arrayToDataTable([
                 ['Výše úvěru [tis. Kč]', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
-                   [' do 50 (299 z 12904)',
+                   [' do 50 (298 z 12899)',
                     0, 0, 0.02, 0.05, 0, 0.21, 0, 0.35, 0.41, 0.64, 0.64
                     ], 
-                   ['od 50 do 100 (245 z 10649)',
+                   ['od 50 do 100 (245 z 10647)',
                     0, 0, 0.01, 0.11, 0, 0.26, 0, 0.45, 0.55, 0.44, 0.47
                     ], 
                    ['od 100 do 150 (132 z 6412)',
@@ -255,8 +255,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         ]);
         var options = {
             chart: {
-                title: 'Zesplatněné půjčky podle výše úvěru (Zonky do 2019-04 vč.)',
-                subtitle: 'Autor: Lukáš Petrovický, 2019-06-02'
+                title: 'Zesplatněné půjčky podle výše úvěru',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 4. 6. 2019 ze Zonky loanbooku ke konci 4/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -264,7 +264,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                   0: {label: 'Zesplatněno z celku [%]'}
                 },
             },
-            series: {
+                        series: {
                 0: { color: '#c0498b'},
                 1: { color: '#8b59be'},
                 2: { color: '#596abe'},
@@ -276,7 +276,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                 8: { color: '#d7954b'},
                 9: { color: '#e75637'},
                 10: { color: '#d12f2f'}
-            },
+            }
+,
             isStacked: true
         };
         var chart_div = document.getElementById('chart-BAR-3-interactive');
@@ -291,19 +292,19 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                    [' do 12 (36 z 1575)',
                     0, 0, 0, 0, 0, 0.13, 0, 0.13, 0.38, 0.51, 1.14
                     ], 
-                   ['od 12 do 24 (92 z 4955)',
+                   ['od 12 do 24 (92 z 4953)',
                     0, 0, 0.02, 0.04, 0, 0.18, 0, 0.3, 0.48, 0.65, 0.18
                     ], 
-                   ['od 24 do 36 (124 z 5089)',
+                   ['od 24 do 36 (124 z 5088)',
                     0, 0, 0, 0.14, 0, 0.2, 0, 0.55, 0.29, 0.57, 0.69
                     ], 
-                   ['od 36 do 48 (116 z 7119)',
-                    0, 0, 0, 0.08, 0, 0.24, 0, 0.37, 0.39, 0.37, 0.18
+                   ['od 36 do 48 (115 z 7116)',
+                    0, 0, 0, 0.08, 0, 0.24, 0, 0.37, 0.39, 0.37, 0.17
                     ], 
                    ['od 48 do 60 (105 z 5795)',
                     0, 0.03, 0.07, 0.14, 0, 0.12, 0, 0.33, 0.35, 0.47, 0.31
                     ], 
-                   ['od 60 do 72 (82 z 4980)',
+                   ['od 60 do 72 (82 z 4979)',
                     0, 0.02, 0.02, 0.22, 0, 0.2, 0, 0.28, 0.24, 0.24, 0.42
                     ], 
                    [' od 72 (291 z 16963)',
@@ -312,8 +313,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         ]);
         var options = {
             chart: {
-                title: 'Zesplatněné půjčky podle délky splácení (Zonky do 2019-04 vč.)',
-                subtitle: 'Autor: Lukáš Petrovický, 2019-06-02'
+                title: 'Zesplatněné půjčky podle délky splácení',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 4. 6. 2019 ze Zonky loanbooku ke konci 4/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -321,7 +322,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                   0: {label: 'Zesplatněno z celku [%]'}
                 },
             },
-            series: {
+                        series: {
                 0: { color: '#c0498b'},
                 1: { color: '#8b59be'},
                 2: { color: '#596abe'},
@@ -333,7 +334,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                 8: { color: '#d7954b'},
                 9: { color: '#e75637'},
                 10: { color: '#d12f2f'}
-            },
+            }
+,
             isStacked: true
         };
         var chart_div = document.getElementById('chart-BAR-4-interactive');
@@ -342,7 +344,93 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
   google.charts.setOnLoadCallback(drawBAR3Chart4);
-    function drawLINE3Chart5() {
+    function drawCOLUMN3Chart5() {
+        var data = google.visualization.arrayToDataTable([
+                ['Má příběh?', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
+                   ['Nemá (46 z 6508)',
+                    0, 0, 0.02, 0.02, 0, 0.09, 0, 0.2, 0.14, 0.11, 0.14
+                    ], 
+                   ['Má (799 z 39961)',
+                    0, 0.02, 0.02, 0.13, 0, 0.26, 0, 0.39, 0.4, 0.44, 0.34
+                    ]
+        ]);
+        var options = {
+            chart: {
+                title: 'Zesplatněné půjčky podle příběhu',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 4. 6. 2019 ze Zonky loanbooku ke konci 4/2019.'
+            },
+            
+            axes: {
+                y: {
+                  0: {label: 'Zesplatněno z celku [%]'}
+                },
+            },
+                        series: {
+                0: { color: '#c0498b'},
+                1: { color: '#8b59be'},
+                2: { color: '#596abe'},
+                3: { color: '#599ebe'},
+                4: { color: '#5abfa0'},
+                5: { color: '#67cd75'},
+                6: { color: '#91c95a'},
+                7: { color: '#cebe5a'},
+                8: { color: '#d7954b'},
+                9: { color: '#e75637'},
+                10: { color: '#d12f2f'}
+            }
+,
+            isStacked: true
+        };
+        var chart_div = document.getElementById('chart-COLUMN-5-interactive');
+        var chart = new google.charts.Bar(chart_div);
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+  google.charts.setOnLoadCallback(drawCOLUMN3Chart5);
+    function drawCOLUMN3Chart6() {
+        var data = google.visualization.arrayToDataTable([
+                ['Má pojištění?', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
+                   ['Nemá (65 z 17852)',
+                    0, 0, 0.01, 0.04, 0, 0.04, 0, 0.09, 0.06, 0.06, 0.06
+                    ], 
+                   ['Má (50 z 7751)',
+                    0, 0, 0, 0.04, 0, 0.05, 0, 0.13, 0.17, 0.1, 0.15
+                    ]
+        ]);
+        var options = {
+            chart: {
+                title: 'Zesplatněné půjčky podle pojištění, od jeho zavedení',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 4. 6. 2019 ze Zonky loanbooku ke konci 4/2019.'
+            },
+            
+            axes: {
+                y: {
+                  0: {label: 'Zesplatněno z celku [%]'}
+                },
+            },
+                        series: {
+                0: { color: '#c0498b'},
+                1: { color: '#8b59be'},
+                2: { color: '#596abe'},
+                3: { color: '#599ebe'},
+                4: { color: '#5abfa0'},
+                5: { color: '#67cd75'},
+                6: { color: '#91c95a'},
+                7: { color: '#cebe5a'},
+                8: { color: '#d7954b'},
+                9: { color: '#e75637'},
+                10: { color: '#d12f2f'}
+            }
+,
+            isStacked: true
+        };
+        var chart_div = document.getElementById('chart-COLUMN-6-interactive');
+        var chart = new google.charts.Bar(chart_div);
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+  google.charts.setOnLoadCallback(drawCOLUMN3Chart6);
+    function drawLINE3Chart7() {
         var data = google.visualization.arrayToDataTable([
                 ['Datum originace', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
                    ['2016-02',
@@ -415,13 +503,13 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                     0, 0.98, 0, 0.59, 0, 2.93, 0, 4.19, 8.97, 8.05, 15.79
                     ], 
                    ['2018-01',
-                    0, 1.08, 0.56, 0.56, 0, 1.23, 0, 4.63, 6.62, 9.33, 12.77
+                    0, 1.08, 0.56, 0.56, 0, 1.23, 0, 4.63, 6.67, 9.33, 10.87
                     ], 
                    ['2018-02',
                     0, 0, 0.52, 0.57, 0, 1.52, 0, 2.76, 5.56, 5.88, 15.22
                     ], 
                    ['2018-03',
-                    0, 0, 0, 0.23, 0, 3.24, 0, 3.36, 4.09, 6.47, 8.11
+                    0, 0, 0, 0.23, 0, 3.24, 0, 3.36, 4.11, 6.47, 8.11
                     ], 
                    ['2018-04',
                     0, 0, 0, 0.24, 0, 1.29, 0, 3.08, 4.52, 8.91, 11.27
@@ -465,15 +553,15 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         ]);
         var options = {
             chart: {
-                title: 'Zesplatnění podle data originace a ratingu [%] (Zonky do 2019-04 vč.)',
-                subtitle: 'Autor: Lukáš Petrovický, 2019-06-02'
+                title: 'Zesplatnění podle data originace a ratingu [%]',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 4. 6. 2019 ze Zonky loanbooku ke konci 4/2019.'
             },
             axes: {
                 y: {
                   0: {label: 'Zesplatněno z originovaných [%]'}
                 },
-            },
-            series: {
+            }
+            ,            series: {
                 0: { color: '#c0498b'},
                 1: { color: '#8b59be'},
                 2: { color: '#596abe'},
@@ -486,11 +574,152 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
                 9: { color: '#e75637'},
                 10: { color: '#d12f2f'}
             }
+
         };
-        var chart_div = document.getElementById('chart-LINE-5-interactive');
+        var chart_div = document.getElementById('chart-LINE-7-interactive');
         var chart = new google.charts.Line(chart_div);
 
         chart.draw(data, google.charts.Line.convertOptions(options));
     }
         // nothing
-  google.charts.setOnLoadCallback(drawLINE3Chart5);
+  google.charts.setOnLoadCallback(drawLINE3Chart7);
+    function drawLINE3Chart8() {
+        var data = google.visualization.arrayToDataTable([
+                ['Datum originace', 'Zesplatněno [%]', 'S pojištěním [%]', 'S příběhem [%]'],
+                   ['2016-02',
+                    2.18, 0, 99.07000000000001
+                    ], 
+                   ['2016-03',
+                    3.8600000000000003, 0, 100
+                    ], 
+                   ['2016-04',
+                    5.4399999999999995, 0, 99.58
+                    ], 
+                   ['2016-05',
+                    3.5700000000000003, 0, 99.03
+                    ], 
+                   ['2016-06',
+                    3.05, 0, 99.24
+                    ], 
+                   ['2016-07',
+                    5.38, 0, 99.1
+                    ], 
+                   ['2016-08',
+                    3.75, 0, 97
+                    ], 
+                   ['2016-09',
+                    3.42, 0, 98.72
+                    ], 
+                   ['2016-10',
+                    3.6900000000000004, 0, 98.15
+                    ], 
+                   ['2016-11',
+                    4.96, 0, 99.05000000000001
+                    ], 
+                   ['2016-12',
+                    7.03, 0, 99.33999999999999
+                    ], 
+                   ['2017-01',
+                    3.7900000000000005, 0, 99.49
+                    ], 
+                   ['2017-02',
+                    2.37, 0, 99.21
+                    ], 
+                   ['2017-03',
+                    4.04, 0, 98.48
+                    ], 
+                   ['2017-04',
+                    5.87, 0, 98.98
+                    ], 
+                   ['2017-05',
+                    4.26, 0, 98.75
+                    ], 
+                   ['2017-06',
+                    5.140000000000001, 0, 98.89
+                    ], 
+                   ['2017-07',
+                    4.46, 0, 98.55000000000001
+                    ], 
+                   ['2017-08',
+                    4.17, 0, 97.31
+                    ], 
+                   ['2017-09',
+                    3.74, 0, 97.8
+                    ], 
+                   ['2017-10',
+                    3.5700000000000003, 0, 97.39
+                    ], 
+                   ['2017-11',
+                    2.81, 0, 97.58
+                    ], 
+                   ['2017-12',
+                    3.34, 0, 97.39999999999999
+                    ], 
+                   ['2018-01',
+                    2.83, 0, 96.8
+                    ], 
+                   ['2018-02',
+                    2.3800000000000003, 0, 97.26
+                    ], 
+                   ['2018-03',
+                    2.44, 0, 96.81
+                    ], 
+                   ['2018-04',
+                    2.27, 17.22, 96.67999999999999
+                    ], 
+                   ['2018-05',
+                    1.69, 29.160000000000004, 95.47
+                    ], 
+                   ['2018-06',
+                    1.16, 25.259999999999998, 94.58
+                    ], 
+                   ['2018-07',
+                    0.83, 28.07, 94.67
+                    ], 
+                   ['2018-08',
+                    0.63, 26.25, 93.91000000000001
+                    ], 
+                   ['2018-09',
+                    0.73, 26.19, 90.99000000000001
+                    ], 
+                   ['2018-10',
+                    0.44, 25.990000000000002, 77.79
+                    ], 
+                   ['2018-11',
+                    0.28, 28.58, 67.27
+                    ], 
+                   ['2018-12',
+                    0.12, 31.16, 62.970000000000006
+                    ], 
+                   ['2019-01',
+                    0.05, 32.37, 64
+                    ], 
+                   ['2019-02',
+                    0, 35.410000000000004, 64.59
+                    ], 
+                   ['2019-03',
+                    0, 36.14, 64.01
+                    ], 
+                   ['2019-04',
+                    0, 35.22, 62.86000000000001
+                    ]
+        ]);
+        var options = {
+            chart: {
+                title: 'Zesplatnění, příběhy a pojištění podle data originace',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 4. 6. 2019 ze Zonky loanbooku ke konci 4/2019.'
+            },
+            axes: {
+                y: {
+                  0: {label: ''}
+                },
+            }
+            
+        };
+        var chart_div = document.getElementById('chart-LINE-8-interactive');
+        var chart = new google.charts.Line(chart_div);
+
+        chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+        // nothing
+  google.charts.setOnLoadCallback(drawLINE3Chart8);

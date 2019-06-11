@@ -14,22 +14,24 @@
         <h1>Zonky loanbook v barvách</h1>
         <ul>
             <li>Tato stránka poskytuje vizualizaci dat z loanbooku investiční platformy Zonky. Mějte na paměti, že <strong>může obsahovat chyby</strong>, nikdo není neomylný.</li>
-            <li>Stránka aktualizována nahodile, zpravidla jednou za měsíc. Poslední aktualizace proběhla 4. 6. 2019 v 17:03:22.</li>
-            <li>Zdrojová data jsou ke stažení na stránce <a href="https://zonky.cz/risk/">Jak se splácí půjčky na Zonky</a>. Odebráno bylo všech 7 půjček, kde žadatel byl "Nezaměstnaný" - tyto půjčky už Zonky neposkytuje a v kontextu jiných druhů příjmů tak 15 % zesplatnění (1 ks) nežádoucím způsobem zkreslovalo grafy.</li>
+            <li>Stránka aktualizována nahodile, zpravidla jednou za měsíc. Poslední aktualizace proběhla 11. 6. 2019 v 21:11:33.</li>
+            <li>Zdrojová data jsou ke stažení na stránce <a href="https://zonky.cz/risk/">Jak se splácí půjčky na Zonky</a>.</li>
             <li>Provozovatelem této stránky jsem já, <a href="https://www.petrovicky.net/">Lukáš Petrovický</a>, autor <a href="https://www.robozonky.cz/">investičního robota RoboZonky</a>. Nejsem žádný velký grafik a hlavně mě uživatelská rozhraní nebaví. <strong>Chcete-li pomoci tuto stránku nastylovat, ozvěte se.</strong></li>
             <li>Ozvěte se také pokud si myslíte, že tu ještě nějaký graf chybí. Občas ve volném čase nějaký přidám.</li>
         </ul>
         <h2>Dostupné grafy</h2>
         <ul>
             <li><a href="#chart-BAR-0">Zesplatněné půjčky podle účelu</a></li>
-            <li><a href="#chart-BAR-1">Zesplatněné půjčky podle kraje</a></li>
-            <li><a href="#chart-BAR-2">Zesplatněné půjčky podle zdroje příjmu žadatele</a></li>
+            <li><a href="#chart-BAR-1">Zesplatněné půjčky podle kraje žadatele</a></li>
+            <li><a href="#chart-BAR-2">Zesplatněné půjčky podle účelu</a></li>
             <li><a href="#chart-BAR-3">Zesplatněné půjčky podle výše úvěru</a></li>
-            <li><a href="#chart-BAR-4">Zesplatněné půjčky podle délky splácení</a></li>
-            <li><a href="#chart-COLUMN-5">Zesplatněné půjčky podle příběhu</a></li>
-            <li><a href="#chart-COLUMN-6">Zesplatněné půjčky podle pojištění, od jeho zavedení</a></li>
-            <li><a href="#chart-LINE-7">Zesplatnění podle data originace a ratingu [%]</a></li>
-            <li><a href="#chart-LINE-8">Zesplatnění, příběhy a pojištění podle data originace</a></li>
+            <li><a href="#chart-BAR-4">Zesplatněné půjčky podle délky úvěru</a></li>
+            <li><a href="#chart-BAR-5">Zesplatněné půjčky podle příběhu</a></li>
+            <li><a href="#chart-BAR-6">Zesplatněné půjčky podle pojištění, od jeho zavedení</a></li>
+            <li><a href="#chart-BAR-7">Zesplatněné půjčky podle statusu investora</a></li>
+            <li><a href="#chart-BAR-8">Zesplatněné půjčky podle počtu předchozích půjček</a></li>
+            <li><a href="#chart-LINE-9">Zesplatnění podle data originace a ratingu [%]</a></li>
+            <li><a href="#chart-LINE-10">Zesplatnění, příběhy a pojištění podle data originace</a></li>
         </ul>
         <h2>A teď už vážně</h2>
     <div id="chart-BAR-0">
@@ -48,6 +50,7 @@
     <hr />
     <div id="chart-BAR-2">
         <div id="chart-BAR-2-interactive" style="width: 1280px; height: 720px;"></div>
+            <div id="chart-BAR-2-comment"><p>Poznámka: Nezahrnuje všech 7 půjček, kde žadatel byl 'Nezaměstnaný' - tyto půjčky už Zonky neposkytuje a v kontextu jiných druhů příjmů tak 15 % zesplatnění (1 ks) nežádoucím způsobem zkreslovalo grafy.</p></div>
         <div id='chart-BAR-2-png'>
             <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-BAR-2.png', document.getElementById('chart-BAR-2-interactive').getElementsByTagName('svg')[0]);" />
         </div>
@@ -55,6 +58,7 @@
     <hr />
     <div id="chart-BAR-3">
         <div id="chart-BAR-3-interactive" style="width: 1280px; height: 720px;"></div>
+            <div id="chart-BAR-3-comment"><p>Poznámka: První půjčka nad 500 tis. Kč byla poskytnuta na konci r. 2016. Půjčky nad tuto částku tedy mohou být o něco mladší než ostatní.</p></div>
         <div id='chart-BAR-3-png'>
             <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-BAR-3.png', document.getElementById('chart-BAR-3-interactive').getElementsByTagName('svg')[0]);" />
         </div>
@@ -67,31 +71,49 @@
         </div>
     </div>
     <hr />
-    <div id="chart-COLUMN-5">
-        <div id="chart-COLUMN-5-interactive" style="width: 1280px; height: 720px;"></div>
-        <div id='chart-COLUMN-5-png'>
-            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-COLUMN-5.png', document.getElementById('chart-COLUMN-5-interactive').getElementsByTagName('svg')[0]);" />
+    <div id="chart-BAR-5">
+        <div id="chart-BAR-5-interactive" style="width: 1280px; height: 720px;"></div>
+            <div id="chart-BAR-5-comment"><p>Poznámka: Do r. 2018 byl příběh vyplněn u více než 90 % procent originovaných půjček. Toto číslo následně začalo dramaticky klesat. Je tedy potřeba vzít v úvahu, že půjčky bez příběhu jsou z velké části výrazně mladší než půjčky s příběhem.</p></div>
+        <div id='chart-BAR-5-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-BAR-5.png', document.getElementById('chart-BAR-5-interactive').getElementsByTagName('svg')[0]);" />
         </div>
     </div>
     <hr />
-    <div id="chart-COLUMN-6">
-        <div id="chart-COLUMN-6-interactive" style="width: 1280px; height: 720px;"></div>
-        <div id='chart-COLUMN-6-png'>
-            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-COLUMN-6.png', document.getElementById('chart-COLUMN-6-interactive').getElementsByTagName('svg')[0]);" />
+    <div id="chart-BAR-6">
+        <div id="chart-BAR-6-interactive" style="width: 1280px; height: 720px;"></div>
+            <div id="chart-BAR-6-comment"><p>Poznámka: Pojištění bylo zavedeno teprve v dubnu 2018, půjčky z předchozího období nejsou zahrnuty.</p></div>
+        <div id='chart-BAR-6-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-BAR-6.png', document.getElementById('chart-BAR-6-interactive').getElementsByTagName('svg')[0]);" />
         </div>
     </div>
     <hr />
-    <div id="chart-LINE-7">
-        <div id="chart-LINE-7-interactive" style="width: 1280px; height: 720px;"></div>
-        <div id='chart-LINE-7-png'>
-            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-LINE-7.png', document.getElementById('chart-LINE-7-interactive').getElementsByTagName('svg')[0]);" />
+    <div id="chart-BAR-7">
+        <div id="chart-BAR-7-interactive" style="width: 1280px; height: 720px;"></div>
+            <div id="chart-BAR-7-comment"><p>Poznámka: Započítány jsou pouze ty půjčky, při jejichž originaci byl klient již investorem.</p></div>
+        <div id='chart-BAR-7-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-BAR-7.png', document.getElementById('chart-BAR-7-interactive').getElementsByTagName('svg')[0]);" />
         </div>
     </div>
     <hr />
-    <div id="chart-LINE-8">
-        <div id="chart-LINE-8-interactive" style="width: 1280px; height: 720px;"></div>
-        <div id='chart-LINE-8-png'>
-            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-LINE-8.png', document.getElementById('chart-LINE-8-interactive').getElementsByTagName('svg')[0]);" />
+    <div id="chart-BAR-8">
+        <div id="chart-BAR-8-interactive" style="width: 1280px; height: 720px;"></div>
+            <div id="chart-BAR-8-comment"><p>Poznámka: Započítány jsou všechny dříve originované Zonky půjčky klienta nezávisle na tom, zda už doběhly.</p></div>
+        <div id='chart-BAR-8-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-BAR-8.png', document.getElementById('chart-BAR-8-interactive').getElementsByTagName('svg')[0]);" />
+        </div>
+    </div>
+    <hr />
+    <div id="chart-LINE-9">
+        <div id="chart-LINE-9-interactive" style="width: 1280px; height: 720px;"></div>
+        <div id='chart-LINE-9-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-LINE-9.png', document.getElementById('chart-LINE-9-interactive').getElementsByTagName('svg')[0]);" />
+        </div>
+    </div>
+    <hr />
+    <div id="chart-LINE-10">
+        <div id="chart-LINE-10-interactive" style="width: 1280px; height: 720px;"></div>
+        <div id='chart-LINE-10-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-LINE-10.png', document.getElementById('chart-LINE-10-interactive').getElementsByTagName('svg')[0]);" />
         </div>
     </div>
     <hr />

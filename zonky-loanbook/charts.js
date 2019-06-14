@@ -34,7 +34,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle účelu',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 11. 6. 2019 ze Zonky loanbooku k 6/2019.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 14. 6. 2019 ze Zonky loanbooku k 6/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -113,7 +113,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle kraje žadatele',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 11. 6. 2019 ze Zonky loanbooku k 6/2019.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 14. 6. 2019 ze Zonky loanbooku k 6/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -173,8 +173,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         ]);
         var options = {
             chart: {
-                title: 'Zesplatněné půjčky podle účelu',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 11. 6. 2019 ze Zonky loanbooku k 6/2019.'
+                title: 'Zesplatněné půjčky podle zdroje příjmu',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 14. 6. 2019 ze Zonky loanbooku k 6/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -256,7 +256,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle výše úvěru',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 11. 6. 2019 ze Zonky loanbooku k 6/2019.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 14. 6. 2019 ze Zonky loanbooku k 6/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -314,7 +314,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle délky úvěru',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 11. 6. 2019 ze Zonky loanbooku k 6/2019.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 14. 6. 2019 ze Zonky loanbooku k 6/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -357,7 +357,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle příběhu',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 11. 6. 2019 ze Zonky loanbooku k 6/2019.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 14. 6. 2019 ze Zonky loanbooku k 6/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -400,7 +400,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle pojištění, od jeho zavedení',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 11. 6. 2019 ze Zonky loanbooku k 6/2019.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 14. 6. 2019 ze Zonky loanbooku k 6/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -443,7 +443,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle statusu investora',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 11. 6. 2019 ze Zonky loanbooku k 6/2019.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 14. 6. 2019 ze Zonky loanbooku k 6/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -507,7 +507,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle počtu předchozích půjček',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 11. 6. 2019 ze Zonky loanbooku k 6/2019.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 14. 6. 2019 ze Zonky loanbooku k 6/2019.'
             },
             bars: 'horizontal',
             axes: {
@@ -664,7 +664,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatnění podle data originace a ratingu [%]',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 11. 6. 2019 ze Zonky loanbooku k 6/2019.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 14. 6. 2019 ze Zonky loanbooku k 6/2019.'
             },
             axes: {
                 y: {
@@ -820,7 +820,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatnění, příběhy a pojištění podle data originace',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 11. 6. 2019 ze Zonky loanbooku k 6/2019.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 14. 6. 2019 ze Zonky loanbooku k 6/2019.'
             },
             axes: {
                 y: {

@@ -23,7 +23,7 @@
         <h1>Zonky loanbook v barvách</h1>
         <ul>
             <li>Tato stránka poskytuje vizualizaci dat z loanbooku investiční platformy Zonky. Mějte na paměti, že <strong>může obsahovat chyby</strong>, nikdo není neomylný.</li>
-            <li>Stránka aktualizována nahodile, zpravidla jednou za měsíc. Poslední aktualizace proběhla 7. 7. 2019 v 17:24:57.</li>
+            <li>Stránka aktualizována nahodile, zpravidla jednou za měsíc. Poslední aktualizace proběhla 5. 8. 2019 v 20:30:40.</li>
             <li>Zdrojová data jsou ke stažení na stránce <a href="https://zonky.cz/risk/">Jak se splácí půjčky na Zonky</a>.</li>
             <li>Provozovatelem této stránky jsem já, <a href="https://www.petrovicky.net/">Lukáš Petrovický</a>, autor <a href="https://www.robozonky.cz/">investičního robota RoboZonky</a>. Nejsem žádný velký grafik a hlavně mě uživatelská rozhraní nebaví. <strong>Chcete-li pomoci tuto stránku nastylovat, ozvěte se.</strong></li>
             <li>Ozvěte se také pokud si myslíte, že tu ještě nějaký graf chybí. Občas ve volném čase nějaký přidám.</li>
@@ -42,8 +42,11 @@
             <li><a href="#chart-LINE-9">Zesplatnění podle data originace a ratingu [%]</a></li>
             <li><a href="#chart-LINE-10">Zesplatnění v průběhu života půjčky, podle ratingu</a></li>
             <li><a href="#chart-LINE-11">Zesplatnění v průběhu života půjčky, podle roku originace</a></li>
-            <li><a href="#chart-LINE-12">Zesplatnění, příběhy a pojištění podle data originace</a></li>
+            <li><a href="#chart-LINE-12">Souhrnné statistiky podle data originace</a></li>
             <li><a href="#chart-COLUMN-13">Skladba úrokových měr v čase</a></li>
+            <li><a href="#chart-COLUMN-14">Skladba účelu ǘvěrů v čase</a></li>
+            <li><a href="#chart-COLUMN-15">Skladba krajů v čase</a></li>
+            <li><a href="#chart-COLUMN-16">Skladba zdrojů příjmu v čase</a></li>
         </ul>
         <h2>A teď už vážně</h2>
     <div id="chart-BAR-0">
@@ -149,6 +152,27 @@
         <div id="chart-COLUMN-13-interactive" style="width: 1280px; height: 720px;"></div>
         <div id='chart-COLUMN-13-png'>
             <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-COLUMN-13.png', document.getElementById('chart-COLUMN-13-interactive').getElementsByTagName('svg')[0]);" />
+        </div>
+    </div>
+    <hr />
+    <div id="chart-COLUMN-14">
+        <div id="chart-COLUMN-14-interactive" style="width: 1280px; height: 720px;"></div>
+        <div id='chart-COLUMN-14-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-COLUMN-14.png', document.getElementById('chart-COLUMN-14-interactive').getElementsByTagName('svg')[0]);" />
+        </div>
+    </div>
+    <hr />
+    <div id="chart-COLUMN-15">
+        <div id="chart-COLUMN-15-interactive" style="width: 1280px; height: 720px;"></div>
+        <div id='chart-COLUMN-15-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-COLUMN-15.png', document.getElementById('chart-COLUMN-15-interactive').getElementsByTagName('svg')[0]);" />
+        </div>
+    </div>
+    <hr />
+    <div id="chart-COLUMN-16">
+        <div id="chart-COLUMN-16-interactive" style="width: 1280px; height: 720px;"></div>
+        <div id='chart-COLUMN-16-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-COLUMN-16.png', document.getElementById('chart-COLUMN-16-interactive').getElementsByTagName('svg')[0]);" />
         </div>
     </div>
     <hr />

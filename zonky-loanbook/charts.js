@@ -34,7 +34,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle účelu',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             bars: 'horizontal',
             axes: {
@@ -113,7 +113,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle kraje žadatele',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             bars: 'horizontal',
             axes: {
@@ -174,7 +174,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle zdroje příjmu',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             bars: 'horizontal',
             axes: {
@@ -256,7 +256,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle výše úvěru',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             bars: 'horizontal',
             axes: {
@@ -289,11 +289,8 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
     function drawBAR3Chart4() {
         var data = google.visualization.arrayToDataTable([
                 ['Délka úvěru', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
-                   ['do 6 měs. (4 z 350)',
-                    0, 0, 0, 0, 0, 0, 0, 0, 0.5714, 0.2857, 0.2857
-                    ], 
-                   ['7 až 12 měs. (52 z 1486)',
-                    0, 0, 0, 0, 0.0673, 0.1346, 0, 0.2019, 0.4711, 0.8748, 1.7497
+                   ['6 až 12 měs. (56 z 1836)',
+                    0, 0, 0, 0, 0.0545, 0.1089, 0, 0.1634, 0.4902, 0.7625, 1.4706
                     ], 
                    ['13 až 18 měs. (53 z 1642)',
                     0, 0, 0.0609, 0.0609, 0, 0.3045, 0, 0.3654, 0.7917, 0.7308, 0.9135
@@ -335,7 +332,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle délky úvěru',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             bars: 'horizontal',
             axes: {
@@ -367,23 +364,56 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
   google.charts.setOnLoadCallback(drawBAR3Chart4);
     function drawBAR3Chart5() {
         var data = google.visualization.arrayToDataTable([
-                ['Má příběh?', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
-                   ['Ne (183 z 3750)',
-                    0, 0, 0.1333, 0.16, 0.1067, 0.56, 0.0533, 1.1467, 1.0667, 0.64, 1.0133
+                ['Délka úvěru', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
+                   ['6 až 12 měs.',
+                    0, 0, 0, 0, 0, 0, 0, 0, 0.52, 1.0254545454545456, 1.3199999999999998
                     ], 
-                   ['Ano (1430 z 21306)',
-                    0, 0.0469, 0.1361, 0.474, 0.0188, 0.9246, 0.0094, 1.3611, 1.3611, 1.347, 1.0326
+                   ['13 až 18 měs.',
+                    0, 0, 0, 0, 0, 0, 0, 0.3260439560439561, 0.4512820512820513, 0.3260439560439561, 0.8024175824175824
+                    ], 
+                   ['19 až 24 měs.',
+                    0, 0, 0, 0, 0, 0, 0, 0.301, 0.2707142857142857, 0.3255652173913043, 0.3682142857142857
+                    ], 
+                   ['25 až 30 měs.',
+                    0, 0, 0, 0, 0, 0.1804615384615385, 0, 0.2721428571428571, 0.3967582417582417, 0.4323931623931624, 0.305823754789272
+                    ], 
+                   ['31 až 36 měs.',
+                    0, 0, 0, 0.035, 0, 0.0986363636363636, 0, 0.4617595307917889, 0.3090909090909091, 0.4746050420168067, 0.4061764705882353
+                    ], 
+                   ['37 až 42 měs.',
+                    0, 0, 0, 0.1221978021978022, 0, 0, 0, 0.2847226173541963, 0.3994459459459459, 0.2887277521423863, 0.3816885553470919
+                    ], 
+                   ['43 až 48 měs.',
+                    0, 0, 0, 0.01375, 0, 0.0381818181818182, 0, 0.2021159420289855, 0.3255942028985507, 0.2226549491211841, 0.0597074468085106
+                    ], 
+                   ['49 až 54 měs.',
+                    0, 0, 0.04, 0.04, 0.02, 0.04, 0.02, 0.411111111111111, 0.4311111111111111, 0.4311111111111111, 0.411111111111111
+                    ], 
+                   ['55 až 60 měs.',
+                    0, 0.03, 0.074, 0.164, 0, 0.164, 0, 0.194, 0.224, 0.314, 0.09
+                    ], 
+                   ['61 až 66 měs.',
+                    0, 0.0181818181818182, 0.0345454545454545, 0.1218181818181818, 0.0345454545454545, 0.2272727272727273, 0, 0.1909090909090909, 0.1563636363636364, 0.2090909090909091, 0.3654545454545455
+                    ], 
+                   ['67 až 72 měs.',
+                    0, 0.015, 0.0583333333333333, 0.16, 0, 0.145, 0, 0.32, 0.2616666666666667, 0.1016666666666667, 0.175
+                    ], 
+                   ['73 až 78 měs.',
+                    0, 0, 0.0184615384615385, 0.0184615384615385, 0, 0.1953846153846154, 0, 0.1784615384615384, 0.4630769230769231, 0.2138461538461538, 0.1953846153846154
+                    ], 
+                   ['od 79 měs.',
+                    0, 0.0128571428571429, 0.0328571428571429, 0.0971428571428571, 0.0042857142857143, 0.2157142857142857, 0.0014285714285714, 0.2728571428571429, 0.2014285714285714, 0.1657142857142857, 0.09
                     ]
         ]);
         var options = {
             chart: {
-                title: 'Zesplatněné půjčky podle příběhu',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                title: 'Normalizovaná rizikovost podle délky úvěru',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             bars: 'horizontal',
             axes: {
                 x: {
-                  0: {label: 'Zesplatněno z ukončených [%]'}
+                  0: {label: 'Odhad zesplatněných ročně [%]'}
                 },
             },
                         series: {
@@ -410,18 +440,18 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
   google.charts.setOnLoadCallback(drawBAR3Chart5);
     function drawBAR3Chart6() {
         var data = google.visualization.arrayToDataTable([
-                ['Má pojištění?', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
-                   ['Ne (293 z 8640)',
-                    0, 0.0231, 0.162, 0.2083, 0.0579, 0.4514, 0.0116, 0.7292, 0.5324, 0.5556, 0.6597
+                ['Má příběh?', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
+                   ['Ne (183 z 3750)',
+                    0, 0, 0.1333, 0.16, 0.1067, 0.56, 0.0533, 1.1467, 1.0667, 0.64, 1.0133
                     ], 
-                   ['Ano (261 z 4136)',
-                    0, 0, 0.0484, 0.4594, 0.0725, 0.5077, 0.0725, 1.2573, 1.6199, 1.088, 1.1847
+                   ['Ano (1430 z 21306)',
+                    0, 0.0469, 0.1361, 0.474, 0.0188, 0.9246, 0.0094, 1.3611, 1.3611, 1.347, 1.0326
                     ]
         ]);
         var options = {
             chart: {
-                title: 'Zesplatněné půjčky podle pojištění, od jeho zavedení',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                title: 'Zesplatněné půjčky podle příběhu',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             bars: 'horizontal',
             axes: {
@@ -453,18 +483,18 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
   google.charts.setOnLoadCallback(drawBAR3Chart6);
     function drawBAR3Chart7() {
         var data = google.visualization.arrayToDataTable([
-                ['Byl při originaci investorem?', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
-                   ['Ne (1600 z 23830)',
-                    0, 0.042, 0.1427, 0.449, 0.0336, 0.9106, 0.0126, 1.3722, 1.3806, 1.2967, 1.0743
+                ['Má pojištění?', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
+                   ['Ne (293 z 8640)',
+                    0, 0.0231, 0.162, 0.2083, 0.0579, 0.4514, 0.0116, 0.7292, 0.5324, 0.5556, 0.6597
                     ], 
-                   ['Ano (13 z 1226)',
-                    0, 0, 0, 0, 0, 0.0816, 0.0816, 0.4894, 0.0816, 0.1631, 0.1631
+                   ['Ano (261 z 4136)',
+                    0, 0, 0.0484, 0.4594, 0.0725, 0.5077, 0.0725, 1.2573, 1.6199, 1.088, 1.1847
                     ]
         ]);
         var options = {
             chart: {
-                title: 'Zesplatněné půjčky podle statusu investora',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                title: 'Zesplatněné půjčky podle pojištění, od jeho zavedení',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             bars: 'horizontal',
             axes: {
@@ -495,6 +525,49 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
     }
   google.charts.setOnLoadCallback(drawBAR3Chart7);
     function drawBAR3Chart8() {
+        var data = google.visualization.arrayToDataTable([
+                ['Byl při originaci investorem?', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
+                   ['Ne (1600 z 23830)',
+                    0, 0.042, 0.1427, 0.449, 0.0336, 0.9106, 0.0126, 1.3722, 1.3806, 1.2967, 1.0743
+                    ], 
+                   ['Ano (13 z 1226)',
+                    0, 0, 0, 0, 0, 0.0816, 0.0816, 0.4894, 0.0816, 0.1631, 0.1631
+                    ]
+        ]);
+        var options = {
+            chart: {
+                title: 'Zesplatněné půjčky podle statusu investora',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
+            },
+            bars: 'horizontal',
+            axes: {
+                x: {
+                  0: {label: 'Zesplatněno z ukončených [%]'}
+                },
+            },
+                        series: {
+                0: { color: '#c0498b'},
+                1: { color: '#8b59be'},
+                2: { color: '#596abe'},
+                3: { color: '#599ebe'},
+                4: { color: '#5abfa0'},
+                5: { color: '#67cd75'},
+                6: { color: '#91c95a'},
+                7: { color: '#cebe5a'},
+                8: { color: '#d7954b'},
+                9: { color: '#e75637'},
+                10: { color: '#d12f2f'}
+            }
+,
+            isStacked: true
+        };
+        var chart_div = document.getElementById('chart-BAR-8-interactive');
+        var chart = new google.charts.Bar(chart_div);
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+  google.charts.setOnLoadCallback(drawBAR3Chart8);
+    function drawBAR3Chart9() {
         var data = google.visualization.arrayToDataTable([
                 ['Počet předchozích půjček', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
                    ['0 (1436 z 19605)',
@@ -534,7 +607,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatněné půjčky podle počtu předchozích půjček',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             bars: 'horizontal',
             axes: {
@@ -558,13 +631,13 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
 ,
             isStacked: true
         };
-        var chart_div = document.getElementById('chart-BAR-8-interactive');
+        var chart_div = document.getElementById('chart-BAR-9-interactive');
         var chart = new google.charts.Bar(chart_div);
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-  google.charts.setOnLoadCallback(drawBAR3Chart8);
-    function drawLINE3Chart9() {
+  google.charts.setOnLoadCallback(drawBAR3Chart9);
+    function drawLINE3Chart10() {
         var data = google.visualization.arrayToDataTable([
                 ['Datum originace', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
                    ['2016-02',
@@ -718,7 +791,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatnění podle data originace a ratingu [%]',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             axes: {
                 y: {
@@ -741,14 +814,14 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
 ,
             isStacked: false
         };
-        var chart_div = document.getElementById('chart-LINE-9-interactive');
+        var chart_div = document.getElementById('chart-LINE-10-interactive');
         var chart = new google.charts.Line(chart_div);
 
         chart.draw(data, google.charts.Line.convertOptions(options));
     }
         // nothing
-  google.charts.setOnLoadCallback(drawLINE3Chart9);
-    function drawLINE3Chart10() {
+  google.charts.setOnLoadCallback(drawLINE3Chart10);
+    function drawLINE3Chart11() {
         var data = google.visualization.arrayToDataTable([
                 ['Počet měsíců života půjčky', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
                    ['0',
@@ -905,7 +978,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatnění v průběhu života půjčky, podle ratingu',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             axes: {
                 y: {
@@ -928,14 +1001,14 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
 ,
             isStacked: false
         };
-        var chart_div = document.getElementById('chart-LINE-10-interactive');
+        var chart_div = document.getElementById('chart-LINE-11-interactive');
         var chart = new google.charts.Line(chart_div);
 
         chart.draw(data, google.charts.Line.convertOptions(options));
     }
         // nothing
-  google.charts.setOnLoadCallback(drawLINE3Chart10);
-    function drawLINE3Chart11() {
+  google.charts.setOnLoadCallback(drawLINE3Chart11);
+    function drawLINE3Chart12() {
         var data = google.visualization.arrayToDataTable([
                 ['Počet měsíců života půjčky', '2016', '2017', '2018', '2019', '2020'],
                    ['0',
@@ -1092,7 +1165,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Zesplatnění v průběhu života půjčky, podle roku originace',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             axes: {
                 y: {
@@ -1102,14 +1175,14 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
             
             isStacked: false
         };
-        var chart_div = document.getElementById('chart-LINE-11-interactive');
+        var chart_div = document.getElementById('chart-LINE-12-interactive');
         var chart = new google.charts.Line(chart_div);
 
         chart.draw(data, google.charts.Line.convertOptions(options));
     }
         // nothing
-  google.charts.setOnLoadCallback(drawLINE3Chart11);
-    function drawLINE3Chart12() {
+  google.charts.setOnLoadCallback(drawLINE3Chart12);
+    function drawLINE3Chart13() {
         var data = google.visualization.arrayToDataTable([
                 ['Měsíc', 'Objemem vážený průměrný úrok [% p.a.]', 'Počtem vážený průměrný úrok [% p.a.]', 'Ztraceno [% objemu]', 'S pojištěním [% všech půjček]', 'Bez příběhu [% všech půjček]'],
                    ['2016-02',
@@ -1263,7 +1336,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Souhrnné statistiky platformy',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             axes: {
                 y: {
@@ -1273,14 +1346,14 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
             
             isStacked: false
         };
-        var chart_div = document.getElementById('chart-LINE-12-interactive');
+        var chart_div = document.getElementById('chart-LINE-13-interactive');
         var chart = new google.charts.Line(chart_div);
 
         chart.draw(data, google.charts.Line.convertOptions(options));
     }
         // nothing
-  google.charts.setOnLoadCallback(drawLINE3Chart12);
-    function drawLINE3Chart13() {
+  google.charts.setOnLoadCallback(drawLINE3Chart13);
+    function drawLINE3Chart14() {
         var data = google.visualization.arrayToDataTable([
                 ['Datum originace', 'Objemem vážený průměrný úrok [% p.a.]', 'Počtem vážený průměrný úrok [% p.a.]', 'Ztraceno [% objemu]', 'Zesplatněno [% ukončených půjček]', 'S pojištěním [% všech půjček]', 'Bez příběhu [% všech půjček]'],
                    ['2016-02',
@@ -1434,7 +1507,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Souhrnné statistiky podle data originace',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             axes: {
                 y: {
@@ -1444,14 +1517,14 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
             
             isStacked: false
         };
-        var chart_div = document.getElementById('chart-LINE-13-interactive');
+        var chart_div = document.getElementById('chart-LINE-14-interactive');
         var chart = new google.charts.Line(chart_div);
 
         chart.draw(data, google.charts.Line.convertOptions(options));
     }
         // nothing
-  google.charts.setOnLoadCallback(drawLINE3Chart13);
-    function drawCOLUMN3Chart14() {
+  google.charts.setOnLoadCallback(drawLINE3Chart14);
+    function drawCOLUMN3Chart15() {
         var data = google.visualization.arrayToDataTable([
                 ['Datum originace', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
                    ['2016-02',
@@ -1605,7 +1678,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Skladba úrokových měr v čase podle počtu úvěrů',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             
             axes: {
@@ -1629,13 +1702,13 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
 ,
             isStacked: true
         };
-        var chart_div = document.getElementById('chart-COLUMN-14-interactive');
+        var chart_div = document.getElementById('chart-COLUMN-15-interactive');
         var chart = new google.charts.Bar(chart_div);
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-  google.charts.setOnLoadCallback(drawCOLUMN3Chart14);
-    function drawCOLUMN3Chart15() {
+  google.charts.setOnLoadCallback(drawCOLUMN3Chart15);
+    function drawCOLUMN3Chart16() {
         var data = google.visualization.arrayToDataTable([
                 ['Datum originace', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
                    ['2016-02',
@@ -1789,7 +1862,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Počet půjček v čase',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             
             axes: {
@@ -1813,13 +1886,13 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
 ,
             isStacked: true
         };
-        var chart_div = document.getElementById('chart-COLUMN-15-interactive');
+        var chart_div = document.getElementById('chart-COLUMN-16-interactive');
         var chart = new google.charts.Bar(chart_div);
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-  google.charts.setOnLoadCallback(drawCOLUMN3Chart15);
-    function drawCOLUMN3Chart16() {
+  google.charts.setOnLoadCallback(drawCOLUMN3Chart16);
+    function drawCOLUMN3Chart17() {
         var data = google.visualization.arrayToDataTable([
                 ['Datum originace', '2.99 % p.a.', '3.99 % p.a.', '4.99 % p.a.', '5.99 % p.a.', '6.99 % p.a.', '8.49 % p.a.', '9.49 % p.a.', '10.99 % p.a.', '13.49 % p.a.', '15.49 % p.a.', '19.99 % p.a.'],
                    ['2016-02',
@@ -1973,7 +2046,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Objem půjček v čase',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             
             axes: {
@@ -1997,13 +2070,13 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
 ,
             isStacked: true
         };
-        var chart_div = document.getElementById('chart-COLUMN-16-interactive');
+        var chart_div = document.getElementById('chart-COLUMN-17-interactive');
         var chart = new google.charts.Bar(chart_div);
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-  google.charts.setOnLoadCallback(drawCOLUMN3Chart16);
-    function drawCOLUMN3Chart17() {
+  google.charts.setOnLoadCallback(drawCOLUMN3Chart17);
+    function drawCOLUMN3Chart18() {
         var data = google.visualization.arrayToDataTable([
                 ['Datum originace', 'Auto-moto', 'Cestování', 'Domácnost', 'Elektronika', 'Jiné', 'Refinancování půjček', 'Vlastní projekt', 'Vzdělání', 'Zdraví'],
                    ['2016-02',
@@ -2157,7 +2230,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Skladba účelu ǘvěrů v čase',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             
             axes: {
@@ -2168,13 +2241,13 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
             
             isStacked: true
         };
-        var chart_div = document.getElementById('chart-COLUMN-17-interactive');
+        var chart_div = document.getElementById('chart-COLUMN-18-interactive');
         var chart = new google.charts.Bar(chart_div);
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-  google.charts.setOnLoadCallback(drawCOLUMN3Chart17);
-    function drawCOLUMN3Chart18() {
+  google.charts.setOnLoadCallback(drawCOLUMN3Chart18);
+    function drawCOLUMN3Chart19() {
         var data = google.visualization.arrayToDataTable([
                 ['Datum originace', 'Hlavní město Praha', 'Jihomoravský kraj', 'Jihočeský kraj', 'Karlovarský kraj', 'Kraj Vysočina', 'Královéhradecký kraj', 'Liberecký kraj', 'Moravskoslezský kraj', 'Olomoucký kraj', 'Pardubický kraj', 'Plzeňský kraj', 'Středočeský kraj', 'Zlínský kraj', 'Ústecký kraj'],
                    ['2016-02',
@@ -2328,7 +2401,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Skladba krajů v čase',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             
             axes: {
@@ -2339,13 +2412,13 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
             
             isStacked: true
         };
-        var chart_div = document.getElementById('chart-COLUMN-18-interactive');
+        var chart_div = document.getElementById('chart-COLUMN-19-interactive');
         var chart = new google.charts.Bar(chart_div);
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-  google.charts.setOnLoadCallback(drawCOLUMN3Chart18);
-    function drawCOLUMN3Chart19() {
+  google.charts.setOnLoadCallback(drawCOLUMN3Chart19);
+    function drawCOLUMN3Chart20() {
         var data = google.visualization.arrayToDataTable([
                 ['Datum originace', 'Důchod', 'Jiné', 'Nezaměstnaný', 'OSVČ', 'Podnikatel', 'Rodičovská dovolená', 'Student', 'Svobodné povolání', 'Zaměstnanec'],
                    ['2016-02',
@@ -2499,7 +2572,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Skladba zdrojů příjmu v čase',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             
             axes: {
@@ -2510,13 +2583,13 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
             
             isStacked: true
         };
-        var chart_div = document.getElementById('chart-COLUMN-19-interactive');
+        var chart_div = document.getElementById('chart-COLUMN-20-interactive');
         var chart = new google.charts.Bar(chart_div);
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-  google.charts.setOnLoadCallback(drawCOLUMN3Chart19);
-    function drawCOLUMN3Chart20() {
+  google.charts.setOnLoadCallback(drawCOLUMN3Chart20);
+    function drawCOLUMN3Chart21() {
         var data = google.visualization.arrayToDataTable([
                 ['Datum originace', 'do 50 000,- Kč', '50 001,- až 100 000,- Kč', '100 001,- až 150 000,- Kč', '150 001,- až 200 000,- Kč', '200 001,- až 250 000,- Kč', '250 001,- až 300 000,- Kč', '300 001,- až 350 000,- Kč', '350 001,- až 400 000,- Kč', '400 001,- až 450 000,- Kč', '450 001,- až 500 000,- Kč', '500 001,- až 550 000,- Kč', '550 001,- až 600 000,- Kč', '600 001,- až 650 000,- Kč', '650 001,- až 700 000,- Kč', 'od 700 001,- Kč'],
                    ['2016-02',
@@ -2670,178 +2743,7 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         var options = {
             chart: {
                 title: 'Skladba výší úvěru v čase',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
-            },
-            
-            axes: {
-                y: {
-                  0: {label: 'Podíl počtu na celku [%]'}
-                },
-            },
-            
-            isStacked: true
-        };
-        var chart_div = document.getElementById('chart-COLUMN-20-interactive');
-        var chart = new google.charts.Bar(chart_div);
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-    }
-  google.charts.setOnLoadCallback(drawCOLUMN3Chart20);
-    function drawCOLUMN3Chart21() {
-        var data = google.visualization.arrayToDataTable([
-                ['Datum originace', 'do 6 měs.', '7 až 12 měs.', '13 až 18 měs.', '19 až 24 měs.', '25 až 30 měs.', '31 až 36 měs.', '37 až 42 měs.', '43 až 48 měs.', '49 až 54 měs.', '55 až 60 měs.', '61 až 66 měs.', '67 až 72 měs.', '73 až 78 měs.', 'od 79 měs.'],
-                   ['2016-02',
-                    3.4268, 5.919, 8.4112, 11.5265, 9.6573, 9.9688, 5.6075, 11.215, 3.7383, 6.2305, 5.919, 4.6729, 2.1807, 11.5265
-                    ], 
-                   ['2016-03',
-                    0.3509, 2.807, 2.807, 8.0702, 7.0175, 12.9825, 7.7193, 11.2281, 5.614, 6.6667, 4.5614, 5.9649, 3.1579, 21.0526
-                    ], 
-                   ['2016-04',
-                    0, 2.5105, 2.5105, 10.4603, 5.4393, 9.205, 8.7866, 10.4603, 7.9498, 8.3682, 10.0418, 6.6946, 2.0921, 15.4812
-                    ], 
-                   ['2016-05',
-                    0, 3.5714, 3.2468, 9.7403, 7.7922, 10.0649, 7.4675, 10.7143, 3.8961, 9.7403, 4.2208, 4.8701, 3.8961, 20.7792
-                    ], 
-                   ['2016-06',
-                    0, 1.145, 6.1069, 8.7786, 6.1069, 6.8702, 4.9618, 10.3053, 8.3969, 6.8702, 4.5802, 9.9237, 4.9618, 20.9924
-                    ], 
-                   ['2016-07',
-                    0.8969, 2.2422, 3.5874, 5.3812, 7.6233, 8.0717, 6.278, 10.3139, 7.6233, 12.5561, 6.278, 8.9686, 4.0359, 16.1435
-                    ], 
-                   ['2016-08',
-                    0.3745, 1.8727, 2.9963, 7.1161, 7.4906, 8.6142, 8.6142, 9.3633, 7.4906, 10.1124, 2.9963, 6.367, 3.7453, 22.8464
-                    ], 
-                   ['2016-09',
-                    0.8547, 1.7094, 4.7009, 8.9744, 5.5556, 4.2735, 4.2735, 11.1111, 8.1197, 8.1197, 4.2735, 11.9658, 3.4188, 22.6496
-                    ], 
-                   ['2016-10',
-                    0.738, 2.214, 3.69, 7.7491, 4.428, 7.0111, 6.2731, 11.8081, 7.7491, 10.7011, 5.1661, 8.1181, 5.9041, 18.4502
-                    ], 
-                   ['2016-11',
-                    0.2364, 0.9456, 3.3097, 6.8558, 5.4374, 7.3286, 6.383, 11.3475, 4.7281, 8.5106, 3.7825, 6.8558, 7.3286, 26.9504
-                    ], 
-                   ['2016-12',
-                    0.4396, 1.7582, 3.0769, 6.8132, 4.3956, 7.033, 5.2747, 9.8901, 7.4725, 7.4725, 4.3956, 4.1758, 6.3736, 31.4286
-                    ], 
-                   ['2017-01',
-                    0.2525, 3.0303, 3.5354, 5.303, 5.5556, 9.3434, 3.7879, 10.3535, 8.5859, 7.5758, 4.5455, 8.3333, 6.5657, 23.2323
-                    ], 
-                   ['2017-02',
-                    0.2632, 1.0526, 3.9474, 5.2632, 5.2632, 6.5789, 6.0526, 12.8947, 7.3684, 8.9474, 7.6316, 6.8421, 5.5263, 22.3684
-                    ], 
-                   ['2017-03',
-                    0.7576, 3.2828, 4.798, 6.8182, 4.798, 5.303, 5.8081, 11.8687, 7.0707, 10.8586, 4.798, 6.5657, 3.7879, 23.4848
-                    ], 
-                   ['2017-04',
-                    0.5102, 2.0408, 3.0612, 6.3776, 7.1429, 7.9082, 6.1224, 7.9082, 6.6327, 7.9082, 8.6735, 5.3571, 4.5918, 25.7653
-                    ], 
-                   ['2017-05',
-                    0.5006, 2.0025, 2.8786, 6.1327, 5.0063, 5.8824, 4.7559, 9.5119, 5.5069, 7.5094, 5.8824, 6.8836, 5.1314, 32.4155
-                    ], 
-                   ['2017-06',
-                    0, 2.3185, 2.4194, 7.0565, 5.3427, 5.746, 6.0484, 9.0726, 6.3508, 8.4677, 4.9395, 6.8548, 3.8306, 31.5524
-                    ], 
-                   ['2017-07',
-                    0.4145, 1.5544, 4.2487, 6.5285, 6.2176, 4.9741, 4.8705, 10.8808, 6.4249, 8.1865, 4.9741, 5.8031, 4.9741, 29.9482
-                    ], 
-                   ['2017-08',
-                    0.7819, 1.477, 3.649, 7.5586, 5.7341, 5.6473, 6.603, 9.5569, 4.344, 7.1242, 4.2572, 6.8636, 3.3884, 33.0148
-                    ], 
-                   ['2017-09',
-                    0.5691, 3.0081, 3.4959, 6.0163, 4.3902, 6.1789, 6.3415, 10.0813, 5.935, 6.748, 5.7724, 6.6667, 3.9024, 30.8943
-                    ], 
-                   ['2017-10',
-                    0.4121, 1.9231, 3.0907, 6.9368, 5.3571, 6.3874, 4.6016, 9.1346, 5.7005, 6.7308, 5.5632, 5.1511, 5.2885, 33.7225
-                    ], 
-                   ['2017-11',
-                    0.3937, 2.5872, 3.4308, 6.2992, 5.793, 5.0056, 5.1744, 11.3048, 4.8931, 6.8616, 5.5681, 6.3555, 4.4432, 31.8898
-                    ], 
-                   ['2017-12',
-                    0.6686, 3.1947, 3.4918, 7.1322, 5.052, 5.2749, 6.5379, 10.847, 6.5379, 5.3492, 5.1263, 6.0178, 4.4577, 30.312
-                    ], 
-                   ['2018-01',
-                    0.4461, 3.1227, 3.9405, 5.0558, 5.7993, 5.8736, 5.2045, 9.145, 5.1301, 6.9888, 6.0967, 6.0223, 3.7918, 33.3829
-                    ], 
-                   ['2018-02',
-                    0.2161, 3.098, 3.6023, 5.7637, 4.9712, 4.611, 4.683, 10.6628, 5.5476, 6.7003, 5.5476, 5.4755, 4.8991, 34.2219
-                    ], 
-                   ['2018-03',
-                    0.2163, 2.6501, 4.0022, 5.4624, 5.192, 5.4083, 5.3002, 8.6533, 4.8134, 7.8421, 5.2461, 5.7328, 4.7052, 34.7756
-                    ], 
-                   ['2018-04',
-                    0.4072, 2.7341, 3.6067, 6.1082, 3.8394, 4.7702, 6.05, 10.0058, 5.8755, 7.2717, 5.2356, 5.4101, 5.0611, 33.6242
-                    ], 
-                   ['2018-05',
-                    0.3277, 2.0208, 3.823, 6.6084, 4.97, 6.0076, 5.3523, 10.1038, 5.7892, 6.9907, 4.5877, 5.953, 4.0961, 33.3697
-                    ], 
-                   ['2018-06',
-                    0.452, 2.1095, 3.3149, 6.6298, 4.7715, 6.6298, 5.3742, 10.3466, 4.3697, 6.2783, 4.7715, 5.8764, 4.5203, 34.5555
-                    ], 
-                   ['2018-07',
-                    0.5179, 2.5893, 3.0554, 6.4733, 4.8679, 5.2305, 4.9715, 9.7359, 4.609, 8.2341, 4.8162, 5.1787, 4.0911, 35.6292
-                    ], 
-                   ['2018-08',
-                    0.6296, 2.7282, 4.1448, 6.6107, 4.6695, 5.2466, 5.9286, 9.6013, 5.1941, 6.978, 5.0367, 5.5089, 4.5645, 33.1584
-                    ], 
-                   ['2018-09',
-                    0.484, 2.7828, 3.9927, 6.2916, 5.1422, 5.3842, 4.5372, 9.3769, 4.9607, 6.8966, 6.1101, 5.4446, 3.9927, 34.6038
-                    ], 
-                   ['2018-10',
-                    0.7902, 3.468, 3.2046, 6.5408, 6.0579, 4.5654, 5.3117, 10.1844, 4.5215, 7.0676, 4.4776, 6.453, 4.0825, 33.2748
-                    ], 
-                   ['2018-11',
-                    0.4576, 2.8159, 4.9982, 7.8493, 4.9278, 6.0542, 5.8782, 9.7149, 4.1535, 6.019, 4.8926, 4.8222, 4.2591, 33.1573
-                    ], 
-                   ['2018-12',
-                    0.9878, 4.7647, 4.5322, 8.0186, 5.2876, 5.8106, 5.0552, 10.6334, 4.7066, 5.8687, 3.835, 3.9512, 3.6607, 32.8879
-                    ], 
-                   ['2019-01',
-                    0.5885, 5.0515, 3.4821, 7.5037, 5.6891, 5.4929, 4.9534, 8.9259, 5.591, 6.3266, 4.9044, 4.8553, 3.7764, 32.8592
-                    ], 
-                   ['2019-02',
-                    0.699, 3.2619, 3.6813, 7.4091, 4.4734, 5.7316, 5.3122, 9.0401, 5.918, 6.384, 4.5666, 5.1724, 3.9609, 34.3896
-                    ], 
-                   ['2019-03',
-                    0.5878, 3.0172, 4.4671, 7.6411, 3.8793, 5.6034, 5.721, 8.8166, 6.4655, 7.2492, 4.0752, 5.094, 4.232, 33.1505
-                    ], 
-                   ['2019-04',
-                    0.7361, 3.1285, 3.975, 7.2874, 4.8583, 5.5208, 5.2632, 9.3485, 5.3736, 6.1097, 5.8152, 4.1958, 4.0486, 34.3393
-                    ], 
-                   ['2019-05',
-                    0.8059, 3.4688, 4.1696, 6.9376, 4.4149, 5.7463, 5.2558, 9.7407, 4.7652, 6.7975, 5.431, 4.3798, 3.4688, 34.6181
-                    ], 
-                   ['2019-06',
-                    0.5859, 3.2031, 4.8438, 7.5391, 4.0625, 5.5078, 5.2734, 10, 4.5312, 5.4297, 4.1797, 4.7656, 3.6328, 36.4453
-                    ], 
-                   ['2019-07',
-                    0.7386, 3.8536, 4.2068, 7.9961, 4.7206, 6.0051, 4.817, 9.7624, 4.817, 6.1978, 4.1105, 4.5279, 4.1105, 34.1362
-                    ], 
-                   ['2019-08',
-                    0.4528, 3.2988, 4.3338, 7.4386, 4.4955, 5.6598, 4.5925, 9.282, 4.3014, 6.3066, 4.9806, 5.0129, 4.5278, 35.3169
-                    ], 
-                   ['2019-09',
-                    0.7793, 2.9756, 4.853, 7.1201, 5.3135, 6.022, 4.853, 9.5643, 4.9593, 5.8448, 4.7821, 4.5342, 3.9674, 34.4315
-                    ], 
-                   ['2019-10',
-                    0.6723, 2.937, 3.8924, 7.3248, 5.2017, 5.5202, 5.2725, 9.3064, 4.3878, 5.4494, 5.3432, 4.3878, 4.6355, 35.6688
-                    ], 
-                   ['2019-11',
-                    0.8604, 3.4083, 3.9378, 7.2138, 4.5334, 4.6658, 4.9636, 9.4639, 3.7723, 6.949, 4.5996, 5.4269, 4.368, 35.8372
-                    ], 
-                   ['2019-12',
-                    0.7933, 3.4998, 3.9664, 8.4461, 4.3397, 5.9729, 4.1531, 9.0527, 4.3397, 5.9263, 4.293, 4.8063, 4.573, 35.8376
-                    ], 
-                   ['2020-01',
-                    0.7379, 3.301, 4.2718, 7.4175, 4.1553, 4.6602, 5.1262, 8.0388, 4.3495, 6.4466, 5.4369, 4.6214, 3.4175, 38.0194
-                    ], 
-                   ['2020-02',
-                    0.7801, 2.8975, 3.8633, 5.7578, 3.9004, 5.6835, 4.4205, 8.2467, 5.052, 6.7979, 4.4577, 5.2377, 3.9376, 38.9673
-                    ]
-        ]);
-        var options = {
-            chart: {
-                title: 'Skladba délek úvěru v čase',
-                subtitle: 'Vygeneroval Lukáš Petrovický dne 5. 3. 2020 ze Zonky loanbooku k 3/2020.'
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
             },
             
             axes: {
@@ -2858,3 +2760,174 @@ google.charts.load('current', {'packages':['bar', 'line', 'corechart']});
         chart.draw(data, google.charts.Bar.convertOptions(options));
     }
   google.charts.setOnLoadCallback(drawCOLUMN3Chart21);
+    function drawCOLUMN3Chart22() {
+        var data = google.visualization.arrayToDataTable([
+                ['Datum originace', '6 až 12 měs.', '13 až 18 měs.', '19 až 24 měs.', '25 až 30 měs.', '31 až 36 měs.', '37 až 42 měs.', '43 až 48 měs.', '49 až 54 měs.', '55 až 60 měs.', '61 až 66 měs.', '67 až 72 měs.', '73 až 78 měs.', 'od 79 měs.'],
+                   ['2016-02',
+                    9.3458, 8.4112, 11.5265, 9.6573, 9.9688, 5.6075, 11.215, 3.7383, 6.2305, 5.919, 4.6729, 2.1807, 11.5265
+                    ], 
+                   ['2016-03',
+                    3.1579, 2.807, 8.0702, 7.0175, 12.9825, 7.7193, 11.2281, 5.614, 6.6667, 4.5614, 5.9649, 3.1579, 21.0526
+                    ], 
+                   ['2016-04',
+                    2.5105, 2.5105, 10.4603, 5.4393, 9.205, 8.7866, 10.4603, 7.9498, 8.3682, 10.0418, 6.6946, 2.0921, 15.4812
+                    ], 
+                   ['2016-05',
+                    3.5714, 3.2468, 9.7403, 7.7922, 10.0649, 7.4675, 10.7143, 3.8961, 9.7403, 4.2208, 4.8701, 3.8961, 20.7792
+                    ], 
+                   ['2016-06',
+                    1.145, 6.1069, 8.7786, 6.1069, 6.8702, 4.9618, 10.3053, 8.3969, 6.8702, 4.5802, 9.9237, 4.9618, 20.9924
+                    ], 
+                   ['2016-07',
+                    3.139, 3.5874, 5.3812, 7.6233, 8.0717, 6.278, 10.3139, 7.6233, 12.5561, 6.278, 8.9686, 4.0359, 16.1435
+                    ], 
+                   ['2016-08',
+                    2.2472, 2.9963, 7.1161, 7.4906, 8.6142, 8.6142, 9.3633, 7.4906, 10.1124, 2.9963, 6.367, 3.7453, 22.8464
+                    ], 
+                   ['2016-09',
+                    2.5641, 4.7009, 8.9744, 5.5556, 4.2735, 4.2735, 11.1111, 8.1197, 8.1197, 4.2735, 11.9658, 3.4188, 22.6496
+                    ], 
+                   ['2016-10',
+                    2.952, 3.69, 7.7491, 4.428, 7.0111, 6.2731, 11.8081, 7.7491, 10.7011, 5.1661, 8.1181, 5.9041, 18.4502
+                    ], 
+                   ['2016-11',
+                    1.182, 3.3097, 6.8558, 5.4374, 7.3286, 6.383, 11.3475, 4.7281, 8.5106, 3.7825, 6.8558, 7.3286, 26.9504
+                    ], 
+                   ['2016-12',
+                    2.1978, 3.0769, 6.8132, 4.3956, 7.033, 5.2747, 9.8901, 7.4725, 7.4725, 4.3956, 4.1758, 6.3736, 31.4286
+                    ], 
+                   ['2017-01',
+                    3.2828, 3.5354, 5.303, 5.5556, 9.3434, 3.7879, 10.3535, 8.5859, 7.5758, 4.5455, 8.3333, 6.5657, 23.2323
+                    ], 
+                   ['2017-02',
+                    1.3158, 3.9474, 5.2632, 5.2632, 6.5789, 6.0526, 12.8947, 7.3684, 8.9474, 7.6316, 6.8421, 5.5263, 22.3684
+                    ], 
+                   ['2017-03',
+                    4.0404, 4.798, 6.8182, 4.798, 5.303, 5.8081, 11.8687, 7.0707, 10.8586, 4.798, 6.5657, 3.7879, 23.4848
+                    ], 
+                   ['2017-04',
+                    2.551, 3.0612, 6.3776, 7.1429, 7.9082, 6.1224, 7.9082, 6.6327, 7.9082, 8.6735, 5.3571, 4.5918, 25.7653
+                    ], 
+                   ['2017-05',
+                    2.5031, 2.8786, 6.1327, 5.0063, 5.8824, 4.7559, 9.5119, 5.5069, 7.5094, 5.8824, 6.8836, 5.1314, 32.4155
+                    ], 
+                   ['2017-06',
+                    2.3185, 2.4194, 7.0565, 5.3427, 5.746, 6.0484, 9.0726, 6.3508, 8.4677, 4.9395, 6.8548, 3.8306, 31.5524
+                    ], 
+                   ['2017-07',
+                    1.9689, 4.2487, 6.5285, 6.2176, 4.9741, 4.8705, 10.8808, 6.4249, 8.1865, 4.9741, 5.8031, 4.9741, 29.9482
+                    ], 
+                   ['2017-08',
+                    2.2589, 3.649, 7.5586, 5.7341, 5.6473, 6.603, 9.5569, 4.344, 7.1242, 4.2572, 6.8636, 3.3884, 33.0148
+                    ], 
+                   ['2017-09',
+                    3.5772, 3.4959, 6.0163, 4.3902, 6.1789, 6.3415, 10.0813, 5.935, 6.748, 5.7724, 6.6667, 3.9024, 30.8943
+                    ], 
+                   ['2017-10',
+                    2.3352, 3.0907, 6.9368, 5.3571, 6.3874, 4.6016, 9.1346, 5.7005, 6.7308, 5.5632, 5.1511, 5.2885, 33.7225
+                    ], 
+                   ['2017-11',
+                    2.9809, 3.4308, 6.2992, 5.793, 5.0056, 5.1744, 11.3048, 4.8931, 6.8616, 5.5681, 6.3555, 4.4432, 31.8898
+                    ], 
+                   ['2017-12',
+                    3.8633, 3.4918, 7.1322, 5.052, 5.2749, 6.5379, 10.847, 6.5379, 5.3492, 5.1263, 6.0178, 4.4577, 30.312
+                    ], 
+                   ['2018-01',
+                    3.5688, 3.9405, 5.0558, 5.7993, 5.8736, 5.2045, 9.145, 5.1301, 6.9888, 6.0967, 6.0223, 3.7918, 33.3829
+                    ], 
+                   ['2018-02',
+                    3.3141, 3.6023, 5.7637, 4.9712, 4.611, 4.683, 10.6628, 5.5476, 6.7003, 5.5476, 5.4755, 4.8991, 34.2219
+                    ], 
+                   ['2018-03',
+                    2.8664, 4.0022, 5.4624, 5.192, 5.4083, 5.3002, 8.6533, 4.8134, 7.8421, 5.2461, 5.7328, 4.7052, 34.7756
+                    ], 
+                   ['2018-04',
+                    3.1414, 3.6067, 6.1082, 3.8394, 4.7702, 6.05, 10.0058, 5.8755, 7.2717, 5.2356, 5.4101, 5.0611, 33.6242
+                    ], 
+                   ['2018-05',
+                    2.3484, 3.823, 6.6084, 4.97, 6.0076, 5.3523, 10.1038, 5.7892, 6.9907, 4.5877, 5.953, 4.0961, 33.3697
+                    ], 
+                   ['2018-06',
+                    2.5615, 3.3149, 6.6298, 4.7715, 6.6298, 5.3742, 10.3466, 4.3697, 6.2783, 4.7715, 5.8764, 4.5203, 34.5555
+                    ], 
+                   ['2018-07',
+                    3.1072, 3.0554, 6.4733, 4.8679, 5.2305, 4.9715, 9.7359, 4.609, 8.2341, 4.8162, 5.1787, 4.0911, 35.6292
+                    ], 
+                   ['2018-08',
+                    3.3578, 4.1448, 6.6107, 4.6695, 5.2466, 5.9286, 9.6013, 5.1941, 6.978, 5.0367, 5.5089, 4.5645, 33.1584
+                    ], 
+                   ['2018-09',
+                    3.2668, 3.9927, 6.2916, 5.1422, 5.3842, 4.5372, 9.3769, 4.9607, 6.8966, 6.1101, 5.4446, 3.9927, 34.6038
+                    ], 
+                   ['2018-10',
+                    4.2581, 3.2046, 6.5408, 6.0579, 4.5654, 5.3117, 10.1844, 4.5215, 7.0676, 4.4776, 6.453, 4.0825, 33.2748
+                    ], 
+                   ['2018-11',
+                    3.2735, 4.9982, 7.8493, 4.9278, 6.0542, 5.8782, 9.7149, 4.1535, 6.019, 4.8926, 4.8222, 4.2591, 33.1573
+                    ], 
+                   ['2018-12',
+                    5.7525, 4.5322, 8.0186, 5.2876, 5.8106, 5.0552, 10.6334, 4.7066, 5.8687, 3.835, 3.9512, 3.6607, 32.8879
+                    ], 
+                   ['2019-01',
+                    5.64, 3.4821, 7.5037, 5.6891, 5.4929, 4.9534, 8.9259, 5.591, 6.3266, 4.9044, 4.8553, 3.7764, 32.8592
+                    ], 
+                   ['2019-02',
+                    3.9609, 3.6813, 7.4091, 4.4734, 5.7316, 5.3122, 9.0401, 5.918, 6.384, 4.5666, 5.1724, 3.9609, 34.3896
+                    ], 
+                   ['2019-03',
+                    3.605, 4.4671, 7.6411, 3.8793, 5.6034, 5.721, 8.8166, 6.4655, 7.2492, 4.0752, 5.094, 4.232, 33.1505
+                    ], 
+                   ['2019-04',
+                    3.8646, 3.975, 7.2874, 4.8583, 5.5208, 5.2632, 9.3485, 5.3736, 6.1097, 5.8152, 4.1958, 4.0486, 34.3393
+                    ], 
+                   ['2019-05',
+                    4.2747, 4.1696, 6.9376, 4.4149, 5.7463, 5.2558, 9.7407, 4.7652, 6.7975, 5.431, 4.3798, 3.4688, 34.6181
+                    ], 
+                   ['2019-06',
+                    3.7891, 4.8438, 7.5391, 4.0625, 5.5078, 5.2734, 10, 4.5312, 5.4297, 4.1797, 4.7656, 3.6328, 36.4453
+                    ], 
+                   ['2019-07',
+                    4.5922, 4.2068, 7.9961, 4.7206, 6.0051, 4.817, 9.7624, 4.817, 6.1978, 4.1105, 4.5279, 4.1105, 34.1362
+                    ], 
+                   ['2019-08',
+                    3.7516, 4.3338, 7.4386, 4.4955, 5.6598, 4.5925, 9.282, 4.3014, 6.3066, 4.9806, 5.0129, 4.5278, 35.3169
+                    ], 
+                   ['2019-09',
+                    3.7549, 4.853, 7.1201, 5.3135, 6.022, 4.853, 9.5643, 4.9593, 5.8448, 4.7821, 4.5342, 3.9674, 34.4315
+                    ], 
+                   ['2019-10',
+                    3.6093, 3.8924, 7.3248, 5.2017, 5.5202, 5.2725, 9.3064, 4.3878, 5.4494, 5.3432, 4.3878, 4.6355, 35.6688
+                    ], 
+                   ['2019-11',
+                    4.2687, 3.9378, 7.2138, 4.5334, 4.6658, 4.9636, 9.4639, 3.7723, 6.949, 4.5996, 5.4269, 4.368, 35.8372
+                    ], 
+                   ['2019-12',
+                    4.293, 3.9664, 8.4461, 4.3397, 5.9729, 4.1531, 9.0527, 4.3397, 5.9263, 4.293, 4.8063, 4.573, 35.8376
+                    ], 
+                   ['2020-01',
+                    4.0388, 4.2718, 7.4175, 4.1553, 4.6602, 5.1262, 8.0388, 4.3495, 6.4466, 5.4369, 4.6214, 3.4175, 38.0194
+                    ], 
+                   ['2020-02',
+                    3.6776, 3.8633, 5.7578, 3.9004, 5.6835, 4.4205, 8.2467, 5.052, 6.7979, 4.4577, 5.2377, 3.9376, 38.9673
+                    ]
+        ]);
+        var options = {
+            chart: {
+                title: 'Skladba délek úvěru v čase',
+                subtitle: 'Vygeneroval Lukáš Petrovický dne 6. 3. 2020 ze Zonky loanbooku k 3/2020.'
+            },
+            
+            axes: {
+                y: {
+                  0: {label: 'Podíl počtu na celku [%]'}
+                },
+            },
+            
+            isStacked: true
+        };
+        var chart_div = document.getElementById('chart-COLUMN-22-interactive');
+        var chart = new google.charts.Bar(chart_div);
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+  google.charts.setOnLoadCallback(drawCOLUMN3Chart22);

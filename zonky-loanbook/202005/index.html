@@ -1,7 +1,7 @@
 
 <html>
     <head>
-        <title>Zonky loanbook v barvách (2020-06)</title>
+        <title>Zonky loanbook v barvách (2020-05)</title>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121920303-2"></script>
         <script>
@@ -20,10 +20,10 @@
         <script src="charts.js" defer></script>
     </head>
     <body>
-        <h1>Zonky loanbook v barvách (2020-06)</h1>
+        <h1>Zonky loanbook v barvách (2020-05)</h1>
         <ul>
             <li>Tato stránka poskytuje vizualizaci dat z loanbooku investiční platformy Zonky. Mějte na paměti, že <strong>může obsahovat chyby</strong>, nikdo není neomylný. Na konci stránky najdete <a href="#changes">seznam změn</a>.</li>
-            <li>Stránka aktualizována nahodile, zpravidla jednou za měsíc. Poslední aktualizace proběhla 10. 6. 2020 v 11:45:37.</li>
+            <li>Stránka aktualizována nahodile, zpravidla jednou za měsíc. Poslední aktualizace proběhla 13. 5. 2020 v 11:13:35.</li>
             <li>Zdrojová data jsou ke stažení na stránce <a href="https://zonky.cz/risk/">Jak se splácí půjčky na Zonky</a>.</li>
             <li>Provozovatelem této stránky jsem já, <a href="https://www.petrovicky.net/">Lukáš Petrovický</a>, autor <a href="https://www.robozonky.cz/">investičního robota RoboZonky</a>. Nejsem žádný velký grafik a hlavně mě uživatelská rozhraní nebaví. <strong>Chcete-li pomoci tuto stránku nastylovat, ozvěte se.</strong></li>
             <li>Ozvěte se také pokud si myslíte, že tu ještě nějaký graf chybí. Občas ve volném čase nějaký přidám.</li>
@@ -38,21 +38,22 @@
             <li><a href="#chart-BAR-4">Zesplatněné půjčky podle délky úvěru</a></li>
             <li><a href="#chart-BAR-5">Normalizovaná rizikovost podle délky úvěru</a></li>
             <li><a href="#chart-BAR-6">Zesplatněné půjčky podle příběhu</a></li>
-            <li><a href="#chart-BAR-7">Zesplatněné půjčky podle statusu investora</a></li>
-            <li><a href="#chart-BAR-8">Zesplatněné půjčky podle počtu předchozích půjček</a></li>
-            <li><a href="#chart-LINE-9">Zesplatnění podle data originace a ratingu [%]</a></li>
-            <li><a href="#chart-LINE-10">Zesplatnění v průběhu života půjčky, podle ratingu</a></li>
-            <li><a href="#chart-LINE-11">Zesplatnění v průběhu života půjčky, podle roku originace</a></li>
-            <li><a href="#chart-LINE-12">Souhrnné statistiky platformy</a></li>
-            <li><a href="#chart-LINE-13">Souhrnné statistiky podle data originace</a></li>
-            <li><a href="#chart-COLUMN-14">Skladba úrokových měr v čase podle počtu úvěrů</a></li>
-            <li><a href="#chart-COLUMN-15">Počet půjček v čase</a></li>
-            <li><a href="#chart-COLUMN-16">Objem půjček v čase</a></li>
-            <li><a href="#chart-COLUMN-17">Skladba účelu ǘvěrů v čase</a></li>
-            <li><a href="#chart-COLUMN-18">Skladba krajů v čase</a></li>
-            <li><a href="#chart-COLUMN-19">Skladba zdrojů příjmu v čase</a></li>
-            <li><a href="#chart-COLUMN-20">Skladba výší úvěru v čase</a></li>
-            <li><a href="#chart-COLUMN-21">Skladba délek úvěru v čase</a></li>
+            <li><a href="#chart-BAR-7">Zesplatněné půjčky podle pojištění, od jeho zavedení</a></li>
+            <li><a href="#chart-BAR-8">Zesplatněné půjčky podle statusu investora</a></li>
+            <li><a href="#chart-BAR-9">Zesplatněné půjčky podle počtu předchozích půjček</a></li>
+            <li><a href="#chart-LINE-10">Zesplatnění podle data originace a ratingu [%]</a></li>
+            <li><a href="#chart-LINE-11">Zesplatnění v průběhu života půjčky, podle ratingu</a></li>
+            <li><a href="#chart-LINE-12">Zesplatnění v průběhu života půjčky, podle roku originace</a></li>
+            <li><a href="#chart-LINE-13">Souhrnné statistiky platformy</a></li>
+            <li><a href="#chart-LINE-14">Souhrnné statistiky podle data originace</a></li>
+            <li><a href="#chart-COLUMN-15">Skladba úrokových měr v čase podle počtu úvěrů</a></li>
+            <li><a href="#chart-COLUMN-16">Počet půjček v čase</a></li>
+            <li><a href="#chart-COLUMN-17">Objem půjček v čase</a></li>
+            <li><a href="#chart-COLUMN-18">Skladba účelu ǘvěrů v čase</a></li>
+            <li><a href="#chart-COLUMN-19">Skladba krajů v čase</a></li>
+            <li><a href="#chart-COLUMN-20">Skladba zdrojů příjmu v čase</a></li>
+            <li><a href="#chart-COLUMN-21">Skladba výší úvěru v čase</a></li>
+            <li><a href="#chart-COLUMN-22">Skladba délek úvěru v čase</a></li>
         </ul>
 
         <h2>A teď už vážně</h2>
@@ -111,7 +112,7 @@
     <hr />
     <div id="chart-BAR-7">
         <div id="chart-BAR-7-interactive" style="width: 1280px; height: 720px;"></div>
-            <div id="chart-BAR-7-comment"><p>Poznámka: Započítány jsou pouze ty půjčky, při jejichž originaci byl klient již investorem.</p></div>
+            <div id="chart-BAR-7-comment"><p>Poznámka: Pojištění bylo zavedeno teprve v dubnu 2018, půjčky z předchozího období nejsou zahrnuty.</p></div>
         <div id='chart-BAR-7-png'>
             <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-BAR-7.png', document.getElementById('chart-BAR-7-interactive').getElementsByTagName('svg')[0]);" />
         </div>
@@ -119,22 +120,22 @@
     <hr />
     <div id="chart-BAR-8">
         <div id="chart-BAR-8-interactive" style="width: 1280px; height: 720px;"></div>
-            <div id="chart-BAR-8-comment"><p>Poznámka: Započítány jsou všechny dříve originované Zonky půjčky klienta nezávisle na tom, zda už doběhly.</p></div>
+            <div id="chart-BAR-8-comment"><p>Poznámka: Započítány jsou pouze ty půjčky, při jejichž originaci byl klient již investorem.</p></div>
         <div id='chart-BAR-8-png'>
             <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-BAR-8.png', document.getElementById('chart-BAR-8-interactive').getElementsByTagName('svg')[0]);" />
         </div>
     </div>
     <hr />
-    <div id="chart-LINE-9">
-        <div id="chart-LINE-9-interactive" style="width: 1280px; height: 720px;"></div>
-        <div id='chart-LINE-9-png'>
-            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-LINE-9.png', document.getElementById('chart-LINE-9-interactive').getElementsByTagName('svg')[0]);" />
+    <div id="chart-BAR-9">
+        <div id="chart-BAR-9-interactive" style="width: 1280px; height: 720px;"></div>
+            <div id="chart-BAR-9-comment"><p>Poznámka: Započítány jsou všechny dříve originované Zonky půjčky klienta nezávisle na tom, zda už doběhly.</p></div>
+        <div id='chart-BAR-9-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-BAR-9.png', document.getElementById('chart-BAR-9-interactive').getElementsByTagName('svg')[0]);" />
         </div>
     </div>
     <hr />
     <div id="chart-LINE-10">
         <div id="chart-LINE-10-interactive" style="width: 1280px; height: 720px;"></div>
-            <div id="chart-LINE-10-comment"><p>Poznámka: Za doživší se půjčky nepočítáme půjčky doplacené nebo zesplatněné v měsících předchozích.</p></div>
         <div id='chart-LINE-10-png'>
             <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-LINE-10.png', document.getElementById('chart-LINE-10-interactive').getElementsByTagName('svg')[0]);" />
         </div>
@@ -150,7 +151,7 @@
     <hr />
     <div id="chart-LINE-12">
         <div id="chart-LINE-12-interactive" style="width: 1280px; height: 720px;"></div>
-            <div id="chart-LINE-12-comment"><p>Poznámka: Křivka zesplatnění chybí, neboť v pozdějších měsících ukazuje velmi zavádějící data. (Ukončené = zesplatněné, tedy míra zesplatnění 100 %).</p></div>
+            <div id="chart-LINE-12-comment"><p>Poznámka: Za doživší se půjčky nepočítáme půjčky doplacené nebo zesplatněné v měsících předchozích.</p></div>
         <div id='chart-LINE-12-png'>
             <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-LINE-12.png', document.getElementById('chart-LINE-12-interactive').getElementsByTagName('svg')[0]);" />
         </div>
@@ -158,15 +159,16 @@
     <hr />
     <div id="chart-LINE-13">
         <div id="chart-LINE-13-interactive" style="width: 1280px; height: 720px;"></div>
+            <div id="chart-LINE-13-comment"><p>Poznámka: Křivka zesplatnění chybí, neboť v pozdějších měsících ukazuje velmi zavádějící data. (Ukončené = zesplatněné, tedy míra zesplatnění 100 %).</p></div>
         <div id='chart-LINE-13-png'>
             <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-LINE-13.png', document.getElementById('chart-LINE-13-interactive').getElementsByTagName('svg')[0]);" />
         </div>
     </div>
     <hr />
-    <div id="chart-COLUMN-14">
-        <div id="chart-COLUMN-14-interactive" style="width: 1280px; height: 720px;"></div>
-        <div id='chart-COLUMN-14-png'>
-            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-COLUMN-14.png', document.getElementById('chart-COLUMN-14-interactive').getElementsByTagName('svg')[0]);" />
+    <div id="chart-LINE-14">
+        <div id="chart-LINE-14-interactive" style="width: 1280px; height: 720px;"></div>
+        <div id='chart-LINE-14-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-LINE-14.png', document.getElementById('chart-LINE-14-interactive').getElementsByTagName('svg')[0]);" />
         </div>
     </div>
     <hr />
@@ -219,12 +221,16 @@
         </div>
     </div>
     <hr />
+    <div id="chart-COLUMN-22">
+        <div id="chart-COLUMN-22-interactive" style="width: 1280px; height: 720px;"></div>
+        <div id='chart-COLUMN-22-png'>
+            <input type='button' value='Stáhnout jako PNG' onclick="generate('chart-COLUMN-22.png', document.getElementById('chart-COLUMN-22-interactive').getElementsByTagName('svg')[0]);" />
+        </div>
+    </div>
+    <hr />
 
         <h2 id="changes">Změny a novinky</h2>
         <dl>
-            <dt>10. 6. 2020: Odstraněn graf o zesplatněnosti pojištěných</dt>
-                <dd>Zonky nově poskytuje data o pojištění pouze u půjček, které nejsou zesplatněny.</dd>
-                <dd>V datech za duben tento graf zobrazoval chybné údaje.</dd>
             <dt>6. 3. 2020: Graf normalizované rizikovosti</dt>
                 <dd>A kromě toho ještě další drobná úprava na ose délky půjčky.</dd>
             <dt>5. 3. 2020: Informativní osy</dt>

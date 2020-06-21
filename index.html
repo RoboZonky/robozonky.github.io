@@ -1,97 +1,151 @@
-<!--
-  ~ Copyright 2019 The RoboZonky Project
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~     http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
-<html>
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121920303-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-121920303-1');
-  </script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" href="stylesheets/github-dark.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
-
-  <title>RoboZonky: Automatické investování na zonky.cz</title>
-  <meta name="description" content="Automatické investování na zonky.cz">
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121920303-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-121920303-1');
+    </script>
+    <script src="js/os.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RoboZonky je auto-invest pro Zonky</title>
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="./plugins/bootstrap-4.3.1/css/bootstrap.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./css/settings.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body onload="preselectOs();">
+    <div class="container">
 
-  <div class="wrapper">
-    <header>
-      <h1 class="title">RoboZonky</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">Automatické investování na zonky.cz</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://repo1.maven.org/maven2/com/github/robozonky/distribution/robozonky-distribution-installer/5.8.2/robozonky-distribution-installer-5.8.2-full.jar" class="download-button"><span>Instalátor</span></a>
-          <a href="https://repo1.maven.org/maven2/com/github/robozonky/distribution/robozonky-distribution-full/5.8.2/robozonky-distribution-full-5.8.2.zip" class="download-button zip"><span>Stáhnout</span></a>
-          <a href="https://github.com/triceo/robozonky" class="code">RoboZonky je na Githubu</a>
+        <div class="landing-wrapper">
+
+            <header class="site-header">
+                <div class="row justify-content-center align-items-center position-relative">
+                    <div class="col-md-8 col-lg-8">
+                        <h1>RoboZonky je auto-invest pro Zonky</h1>
+                        <hr />
+                        <p>Chcete-li se dozvědět, jak se RoboZonky používá, navštivte <a href="https://github.com/robozonky/robozonky/wiki" class="btn-link">RoboZonky Wiki</a>.
+                            S prvotním nastavením investiční strategie vám pomůže náš <a href="https://robozonky.github.io/konfigurace-strategie/" class="btn-link">webový konfigurátor</a>.
+                            S dotazy ráda pomůže <a href="https://groups.google.com/forum/#!forum/robozonky-users" class="btn-link">uživatelská skupina</a>!</p>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div class="col-md-8 col-lg-8 offset-lg-2">
+                    <ul class="nav nav-tabs justify-content-center align-items-center" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <span class="nav-link align-middle"><strong>Získejte RoboZonky 6.0.0 pro:</strong></span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="windows-tab" data-toggle="tab" href="#windows" role="tab" aria-controls="windows"><img src="image/logo-windows.png" alt="Microsoft Windows (64-bit)"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="macos-tab" data-toggle="tab" href="#macos" role="tab" aria-controls="macos"><img src="image/logo-apple.png" alt="MacOS (64-bit)"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="linux-tab" data-toggle="tab" href="#linux" role="tab" aria-controls="linux"><img src="image/logo-tux.png" alt="Linux (x86, 64-bit)"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="noarch-tab" data-toggle="tab" href="#noarch" role="tab" aria-controls="noarch"><img src="image/logo-duke.png" alt="Bez Javy"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="docker-tab" data-toggle="tab" href="#docker" role="tab" aria-controls="docker"><img src="image/logo-docker.png" alt="Docker image"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="ansible-tab" data-toggle="tab" href="#ansible" role="tab" aria-controls="ansible"><img src="image/logo-ansible.png" alt="Ansible scripts"></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane" id="windows" role="tabpanel" aria-labelledby="windows-tab">
+                            <div class="offset-lg-1">
+                                <p>Novým uživatelům RoboZonky doporučujeme verzi s instalátorem.</p>
+                                <a href="https://repo1.maven.org/maven2/com/github/robozonky/distribution/robozonky-distribution-installer/6.0.0/robozonky-distribution-installer-6.0.0-windows-x64.zip" class="btn btn-primary btn-lg" role="button">Stáhnout intalátor pro Windows</a>
+                                <a href="https://repo1.maven.org/maven2/com/github/robozonky/distribution/robozonky-distribution-full/6.0.0/robozonky-distribution-full-6.0.0-windows-x64.zip" class="btn btn-secondary btn-lg" role="button">Stáhnout bez instalátoru pro Windows</a>
+                                <p>Upozornění: Tato verze podporuje pouze 64-bitovou architekturu.</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="macos" role="tabpanel" aria-labelledby="macos-tab">
+                            <div class="offset-lg-1">
+                                <p>Novým uživatelům RoboZonky doporučujeme verzi s instalátorem.</p>
+                                <a href="https://repo1.maven.org/maven2/com/github/robozonky/distribution/robozonky-distribution-installer/6.0.0/robozonky-distribution-installer-6.0.0-macos-x64.tar.gz" class="btn btn-primary btn-lg" role="button">Stáhnout intalátor pro MacOS</a>
+                                <a href="https://repo1.maven.org/maven2/com/github/robozonky/distribution/robozonky-distribution-full/6.0.0/robozonky-distribution-full-6.0.0-macos-x64.tar.gz" class="btn btn-secondary btn-lg" role="button">Stáhnout bez instalátoru pro MacOS</a>
+                                <p>Upozornění: Tato verze podporuje pouze 64-bitovou architekturu.</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="linux" role="tabpanel" aria-labelledby="linux-tab">
+                            <div class="offset-lg-1">
+                                <p>Novým uživatelům RoboZonky doporučujeme verzi s instalátorem.</p>
+                                <a href="https://repo1.maven.org/maven2/com/github/robozonky/distribution/robozonky-distribution-installer/6.0.0/robozonky-distribution-installer-6.0.0-linux-x64.tar.xz" class="btn btn-primary btn-lg" role="button">Stáhnout intalátor pro Linux</a>
+                                <a href="https://repo1.maven.org/maven2/com/github/robozonky/distribution/robozonky-distribution-full/6.0.0/robozonky-distribution-full-6.0.0-linux-x64.tar.xz" class="btn btn-secondary btn-lg" role="button">Stáhnout bez instalátoru pro Linux</a>
+                                <p>Upozornění: Tato varianta podporuje pouze 64-bitovou odnož x86 architektury. Uživatelé ARMu musí sáhnout po verzi bez Javy.</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="noarch" role="tabpanel" aria-labelledby="noarch-tab">
+                            <div class="offset-lg-1">
+                                <p>Novým uživatelům RoboZonky doporučujeme verzi s instalátorem.</p>
+                                <a href="https://repo1.maven.org/maven2/com/github/robozonky/distribution/robozonky-distribution-installer/6.0.0/robozonky-distribution-full-6.0.0-noarch.zip" class="btn btn-primary btn-lg" role="button">Stáhnout intalátor bez Javy</a>
+                                <a href="https://repo1.maven.org/maven2/com/github/robozonky/distribution/robozonky-distribution-full/6.0.0/robozonky-distribution-installer-6.0.0-noarch.zip" class="btn btn-secondary btn-lg" role="button">Stáhnout bez instalátoru a Javy</a>
+                                <p>Upozornění: Tato verze vyžaduje na počítači korektně nainstalovanou <a href="https://adoptopenjdk.net/" class="btn-link">Javu 11 nebo novější</a>.</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="docker" role="tabpanel" aria-labelledby="docker-tab">
+                            <div class="offset-lg-1">
+                                <p>Nejnovější stabilní verzi docker kontejneru s RoboZonky získáte takto:</p>
+                                <p><samp>docker push robozonky/robozonky:latest</samp></p>
+                                <p>Více na <a href="https://hub.docker.com/repository/docker/robozonky/robozonky"
+                                              class="btn-link">RoboZonky Docker Hubu</a>.</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="ansible" role="tabpanel" aria-labelledby="ansible-tab">
+                            <div class="offset-lg-1">
+                                <p>Jeden ze členů komunity připravuje <a
+                                        href="https://github.com/v6ak/robozonky-ansible" class="btn-link">Ansible
+                                    skripty pro nasazení RoboZonky</a>, které jsou volně dostupné.</p>
+                                <p>Mějte však na paměti, že tyto skripty nejsou oficiální součástí projektu RoboZonky a
+                                    nemusí tedy být vždy plně aktuální. Zpětnou vazbu poskytujte přímo autorovi na výše
+                                    uvedené adrese.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div style="float: right;">
+                        <img width="175" height="175" src="./image/qr-payment.png" alt="QR platba" />
+                    </div>
+                    <p>RoboZonky je open source projekt, který ocení vaši pomoc! Ať už chcete RoboZonky něco nového
+                        naučit, opravit chybu nebo zdokumentovat nějaké chování,
+                        <a href="https://github.com/RoboZonky/robozonky" class="btn-link">dveře jsou otevřené</a>.</p>
+                    <p>Autorem RoboZonky je <a href="http://www.petrovicky.net/" class="btn-link">Lukáš Petrovický</a>.
+                        Přejete-li si vyjádřit uznání za čas, který strávil vývojem, či podpořit další vývoj, můžete
+                        poslat příspěvek v jakékoliv výši na účet u České Spořitelny č. 2925810063 / 0800.</p>
+                </div>
+            </main>
+
+            <footer>
+                <section class="footer-section">
+                    <div class="copyright">
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                            <img alt="Creative Commons License" style="border-width:0"
+                                 src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is
+                        licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative
+                        Commons Attribution-NonCommercial 4.0 International License</a>.
+                    </div>
+                </section>
+            </footer>
+
         </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h3><a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RoboZonky vás vítá!</h3>
-          <p>Chcete-li se dozvědět, jak se RoboZonky používá, navštivte
-            <a href="https://github.com/robozonky/robozonky/wiki">RoboZonky Wiki</a>. Začínajícím uživatelům
-              doporučujeme <a href="https://repo1.maven.org/maven2/com/github/robozonky/distribution/robozonky-distribution-installer/5.8.2/robozonky-distribution-installer-5.8.2-full.jar">stáhnout instalátor RoboZonky</a>,
-              někoho může zaujmout také <a href="https://hub.docker.com/r/robozonky/robozonky/">RoboZonky Docker image</a>.</p>
-          <p>S prvotním nastavením investiční strategie vám pomůže náš <a href="https://robozonky.github.io/konfigurace-strategie/">webový konfigurátor</a>.
-          <p>Máte k RoboZonky nějakou otázku, nefunguje vám něco? Pak je tu právě pro vás 
-            <a href="https://groups.google.com/forum/#!forum/robozonky-users">uživatelská skupina</a>!</p>
-          <div>
-            <div style="float: right;">
-              <img width="175" height="175" src="./images/qr-payment.png" alt="QR platba" />
-            </div>
-            <div>
-              <p>RoboZonky je open source projekt, který ocení vaši pomoc! Ať už chcete RoboZonky něco nového naučit,
-               opravit chybu nebo zdokumentovat nějaké chování,
-               <a title="RoboZonky na Githubu" href="https://github.com/robozonky">dveře jsou otevřené</a>.</p>
-              <p>RoboZonky byl, je a vždycky zůstane <strong>zdarma</strong>. Pokud si ale přejete vyjádřit autorovi 
-               uznání za čas, který strávil vývojem, či podpořit další vývoj, můžete poslat příspěvek v&nbsp;jakékoliv 
-               výši na účet u České Spořitelny č. <strong>2925810063&nbsp;/&nbsp;0800</strong>. Díky!</p>
-            </div>
-          </div>
-          <p></p>
-        </article>
-      </div>
     </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/triceo" class="avatar"><img src="https://avatars0.githubusercontent.com/u/247403?v=3&amp;s=60" width="48" height="48"></a> Autorem <a href="https://github.com/robozonky">RoboZonky</a> je <a href="https://github.com/triceo">Lukáš Petrovický</a>.</p>
-      </div>
-      <div class="creds">
-        <small>Stránka vygenerována s použitím <a href="https://pages.github.com/">GitHub Pages</a><br> motiv od <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
+    <script src="./plugins/jquery/jquery.min.js"></script>
+    <script src="./plugins/jquery/jquery-migrate.min.js"></script>
+    <script src="./plugins/bootstrap-4.3.1/js/bootstrap.bundle.js"></script>
 </body>
+
 </html>

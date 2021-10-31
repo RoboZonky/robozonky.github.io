@@ -10,144 +10,14 @@
         gtag('js', new Date());
         gtag('config', 'UA-121920303-1');
     </script>
-    <script src="js/os.js"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RoboZonky je auto-invest pro Zonky</title>
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="./plugins/bootstrap-4.3.1/css/bootstrap.min.css">
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="./css/settings.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>RoboZonky už není</title>
 </head>
 
-<body onload="preselectOs();">
-    <div class="container">
-
-        <div class="landing-wrapper">
-
-            <header class="site-header">
-                <div class="row justify-content-center align-items-center position-relative">
-                    <div class="col-md-8 col-lg-8">
-                        <h1>RoboZonky je auto-invest pro Zonky</h1>
-                        <hr />
-                        <p>Chcete-li se dozvědět, jak se RoboZonky používá, navštivte <a href="https://github.com/robozonky/robozonky/wiki" class="btn-link">RoboZonky Wiki</a>.
-                            S prvotním nastavením investiční strategie vám pomůže náš <a href="https://robozonky.github.io/konfigurace-strategie/" class="btn-link">webový konfigurátor</a>.
-                            S dotazy se obracejte na <a href="https://groups.google.com/forum/#!forum/robozonky-users" class="btn-link">uživatelskou skupinu</a>.</p>
-                        <p><strong>Nejnovější verze RoboZonky je 6.4.1.</strong>
-                            Podívejte se, <a href="https://github.com/RoboZonky/robozonky/releases/latest" class="btn-link">co je nového</a>.</p>
-                    </div>
-                </div>
-            </header>
-
-            <main>
-                <div class="col-md-8 col-lg-8 offset-lg-2">
-                    <ul class="nav nav-tabs justify-content-center align-items-center" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <span class="nav-link align-middle"><strong>Získejte RoboZonky 6.4.1 pro:</strong></span>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="windows-tab" data-toggle="tab" href="#windows" role="tab" aria-controls="windows"><img src="image/logo-windows.png" alt="Microsoft Windows (64-bit)"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="macos-tab" data-toggle="tab" href="#macos" role="tab" aria-controls="macos"><img src="image/logo-apple.png" alt="MacOS (64-bit)"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="linux-tab" data-toggle="tab" href="#linux" role="tab" aria-controls="linux"><img src="image/logo-tux.png" alt="Linux (x86, 64-bit)"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="noarch-tab" data-toggle="tab" href="#noarch" role="tab" aria-controls="noarch"><img src="image/logo-duke.png" alt="Bez Javy"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="docker-tab" data-toggle="tab" href="#docker" role="tab" aria-controls="docker"><img src="image/logo-docker.png" alt="Docker image"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="ansible-tab" data-toggle="tab" href="#ansible" role="tab" aria-controls="ansible"><img src="image/logo-ansible.png" alt="Ansible scripts"></a>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane" id="windows" role="tabpanel" aria-labelledby="windows-tab">
-                            <div class="offset-lg-1">
-                                <p>Novým uživatelům RoboZonky doporučujeme verzi s instalátorem.</p>
-                                <a href="https://github.com/RoboZonky/robozonky/releases/download/robozonky-6.4.1/robozonky-installer-6.4.1-windows-x64.zip" class="btn btn-primary btn-lg" role="button">Stáhnout instalátor pro Windows</a>
-                                <a href="https://github.com/RoboZonky/robozonky/releases/download/robozonky-6.4.1/robozonky-6.4.1-windows-x64.zip" class="btn btn-secondary btn-lg" role="button">Stáhnout bez instalátoru pro Windows</a>
-                                <p>Upozornění: Tato verze podporuje pouze 64-bitovou architekturu.</p>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="macos" role="tabpanel" aria-labelledby="macos-tab">
-                            <div class="offset-lg-1">
-                                <p>Novým uživatelům RoboZonky doporučujeme verzi s instalátorem.</p>
-                                <a href="https://github.com/RoboZonky/robozonky/releases/download/robozonky-6.4.1/robozonky-installer-6.4.1-macos-x64.tar.gz" class="btn btn-primary btn-lg" role="button">Stáhnout instalátor pro MacOS</a>
-                                <a href="https://github.com/RoboZonky/robozonky/releases/download/robozonky-6.4.1/robozonky-6.4.1-macos-x64.tar.gz" class="btn btn-secondary btn-lg" role="button">Stáhnout bez instalátoru pro MacOS</a>
-                                <p>Upozornění: Tato verze podporuje pouze 64-bitovou architekturu.</p>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="linux" role="tabpanel" aria-labelledby="linux-tab">
-                            <div class="offset-lg-1">
-                                <p>Novým uživatelům RoboZonky doporučujeme verzi s instalátorem.</p>
-                                <a href="https://github.com/RoboZonky/robozonky/releases/download/robozonky-6.4.1/robozonky-installer-6.4.1-linux-x64.tar.xz" class="btn btn-primary btn-lg" role="button">Stáhnout instalátor pro Linux</a>
-                                <a href="https://github.com/RoboZonky/robozonky/releases/download/robozonky-6.4.1/robozonky-6.4.1-linux-x64.tar.xz" class="btn btn-secondary btn-lg" role="button">Stáhnout bez instalátoru pro Linux</a>
-                                <p>Upozornění: Tato varianta podporuje pouze 64-bitovou odnož x86 architektury. <strong>Uživatelé Raspberry Pi a dalších ARMových zařízení musí sáhnout po verzi bez Javy.</strong></p>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="noarch" role="tabpanel" aria-labelledby="noarch-tab">
-                            <div class="offset-lg-1">
-                                <p>Novým uživatelům RoboZonky doporučujeme verzi s instalátorem.</p>
-                                <a href="https://github.com/RoboZonky/robozonky/releases/download/robozonky-6.4.1/robozonky-installer-6.4.1-noarch.zip" class="btn btn-primary btn-lg" role="button">Stáhnout instalátor bez Javy</a>
-                                <a href="https://github.com/RoboZonky/robozonky/releases/download/robozonky-6.4.1/robozonky-6.4.1-noarch.zip" class="btn btn-secondary btn-lg" role="button">Stáhnout bez instalátoru a Javy</a>
-                                <p>Upozornění: Tato verze vyžaduje na počítači korektně nainstalovanou <a href="https://adoptopenjdk.net/" class="btn-link">Javu 11 nebo novější</a>.</p>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="docker" role="tabpanel" aria-labelledby="docker-tab">
-                            <div class="offset-lg-1">
-                                <p>Nejnovější stabilní verzi Docker kontejneru s RoboZonky získáte takto:</p>
-                                <p><samp>docker pull robozonky/robozonky:latest</samp></p>
-                                <p>Více na <a href="https://hub.docker.com/repository/docker/robozonky/robozonky"
-                                              class="btn-link">RoboZonky Docker Hubu</a>.</p>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="ansible" role="tabpanel" aria-labelledby="ansible-tab">
-                            <div class="offset-lg-1">
-                                <p>Jeden ze členů komunity připravuje <a
-                                        href="https://github.com/v6ak/robozonky-ansible" class="btn-link">Ansible
-                                    skripty pro nasazení RoboZonky</a>, které jsou volně dostupné.</p>
-                                <p>Mějte však na paměti, že tyto skripty nejsou oficiální součástí projektu RoboZonky a
-                                    nemusí tedy být vždy plně aktuální. Zpětnou vazbu poskytujte přímo autorovi na výše
-                                    uvedené adrese.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-                    <div style="float: right;">
-                        <img width="175" height="175" src="./image/qr-payment.png" alt="QR platba" />
-                    </div>
-                    <p>RoboZonky je open source projekt, který ocení vaši pomoc! Ať už chcete RoboZonky něco nového
-                        naučit, opravit chybu nebo zdokumentovat nějaké chování,
-                        <a href="https://github.com/RoboZonky/robozonky" class="btn-link">dveře jsou otevřené</a>.</p>
-                    <p>Autorem RoboZonky je <a href="http://www.petrovicky.net/" class="btn-link">Lukáš Petrovický</a>.
-                        Přejete-li si vyjádřit uznání za čas, který strávil vývojem, či podpořit další vývoj, můžete
-                        poslat příspěvek v jakékoliv výši na účet u České Spořitelny č. 2925810063 / 0800.</p>
-                </div>
-            </main>
-
-            <footer>
-                <section class="footer-section">
-                    <div class="copyright">
-                        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-                            <img alt="Creative Commons License" style="border-width:0"
-                                 src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is
-                        licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative
-                        Commons Attribution-NonCommercial 4.0 International License</a>.
-                    </div>
-                </section>
-            </footer>
-
-        </div>
-    </div>
-    <script src="./plugins/jquery/jquery.min.js"></script>
-    <script src="./plugins/jquery/jquery-migrate.min.js"></script>
-    <script src="./plugins/bootstrap-4.3.1/js/bootstrap.bundle.js"></script>
+<body>
+    <h1>Project RoboZonky ukončil svou činnost.</h1>
+    <p>V důsledku ukončení individuálního investování na platformě Zonky ukončil projekt RoboZonky k 1. 11. 2021 svou činnost.</p>
+    <p>Poslední dostupnou verzi RoboZonky najdete <a href="https://github.com/RoboZonky/robozonky/releases/latest">zde</a>, ale lze důvodně předpokládat, že bude zcela k ničemu.</p>
 </body>
 
 </html>
